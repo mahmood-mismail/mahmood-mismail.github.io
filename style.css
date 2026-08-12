@@ -66,7 +66,6 @@ p {
 .site-header {
     position: sticky;
     top: 0;
-
     z-index: 1000;
 
     background: rgba(245, 245, 242, 0.94);
@@ -140,25 +139,25 @@ p {
 ========================================= */
 
 .hero {
-    padding: 78px 0 68px;
+    padding: 46px 0 62px;
 
     border-bottom: 1px solid var(--border);
 }
 
 .hero .eyebrow {
-    font-size: 10px;
+    font-size: 9px;
     font-weight: 800;
 
-    letter-spacing: 0.18em;
+    letter-spacing: 0.17em;
 
     color: var(--muted-light);
 }
 
 .hero h1 {
-    margin-top: 18px;
+    margin-top: 14px;
 
     font-size:
-        clamp(54px, 7vw, 88px);
+        clamp(48px, 5.7vw, 72px);
 
     line-height: 0.88;
 
@@ -170,10 +169,10 @@ p {
 .hero h2 {
     max-width: 820px;
 
-    margin-top: 30px;
+    margin-top: 26px;
 
     font-size:
-        clamp(25px, 3.2vw, 42px);
+        clamp(24px, 3vw, 38px);
 
     line-height: 1.05;
 
@@ -183,15 +182,13 @@ p {
 }
 
 .hero-specialties {
-    margin-top: 17px;
+    margin-top: 15px;
 
     color: var(--accent-dark);
 
-    font-size: 14px;
+    font-size: 13px;
 
     font-weight: 700;
-
-    letter-spacing: 0.01em;
 }
 
 .hero-specialties span {
@@ -203,27 +200,13 @@ p {
 .hero-description {
     max-width: 680px;
 
-    margin-top: 22px;
+    margin-top: 19px;
 
     color: var(--muted);
 
-    font-size: 16px;
+    font-size: 15px;
 
     line-height: 1.7;
-}
-
-.hero-location {
-    margin-top: 30px;
-
-    color: var(--muted-light);
-
-    font-size: 11px;
-
-    font-weight: 650;
-
-    letter-spacing: 0.08em;
-
-    text-transform: uppercase;
 }
 
 
@@ -233,7 +216,6 @@ p {
 
 .numbers-section {
     background: var(--dark);
-
     color: white;
 }
 
@@ -242,15 +224,17 @@ p {
     margin: 0 auto;
 
     display: grid;
+}
 
+.personal-grid {
     grid-template-columns:
-        repeat(6, 1fr);
+        repeat(4, 1fr);
 }
 
 .number-item {
-    min-height: 150px;
+    min-height: 165px;
 
-    padding: 30px 18px;
+    padding: 30px 25px;
 
     border-right: 1px solid #333333;
 
@@ -264,7 +248,7 @@ p {
 }
 
 .number-item strong {
-    font-size: 25px;
+    font-size: 27px;
 
     line-height: 1;
 
@@ -278,11 +262,29 @@ p {
 
     font-size: 10px;
 
-    line-height: 1.45;
+    line-height: 1.5;
 
     text-transform: uppercase;
 
     letter-spacing: 0.055em;
+}
+
+.number-item em {
+    display: block;
+
+    margin-top: 5px;
+
+    color: #dddddd;
+
+    font-size: 9px;
+
+    font-style: normal;
+
+    line-height: 1.5;
+
+    text-transform: none;
+
+    letter-spacing: 0;
 }
 
 
@@ -352,63 +354,26 @@ p {
     line-height: 1.78;
 }
 
-.languages {
-    margin-top: 34px;
-
-    padding-top: 20px;
-
-    border-top: 1px solid var(--border);
-}
-
-.languages-label {
-    display: block;
-
-    margin-bottom: 8px;
-
-    color: var(--text);
-
-    font-size: 10px;
-
-    font-weight: 800;
-
-    text-transform: uppercase;
-
-    letter-spacing: 0.12em;
-}
-
-.languages p {
-    color: var(--muted);
-
-    font-size: 13px;
-
-    line-height: 1.6;
-}
-
-.languages p span {
-    color: var(--muted-light);
-
-    margin: 0 4px;
-}
-
 
 /* =========================================
    EXPERIENCE
 ========================================= */
 
+.experience-section {
+    padding-bottom: 100px;
+}
+
 .experience-company {
-    margin-top: 55px;
+    margin-top: 60px;
 
-    padding: 55px 0 70px;
+    padding: 0 0 75px;
 
-    border-top: 2px solid var(--text);
+    border-bottom: 1px solid var(--border);
 }
 
-.experience-company:first-of-type {
-    margin-top: 55px;
-}
-
-.experience-company + .experience-company {
-    margin-top: 20px;
+.experience-company:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
 }
 
 .company-header {
@@ -419,15 +384,31 @@ p {
     justify-content: space-between;
 
     gap: 40px;
+
+    padding-bottom: 28px;
+
+    border-bottom: 2px solid var(--text);
+}
+
+.company-kicker {
+    margin-bottom: 10px;
+
+    color: var(--accent-dark);
+
+    font-size: 9px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.15em;
 }
 
 .company-header h2 {
     font-size:
-        clamp(35px, 4vw, 50px);
+        clamp(38px, 4.3vw, 54px);
 
-    line-height: 1;
+    line-height: 0.95;
 
-    letter-spacing: -0.05em;
+    letter-spacing: -0.055em;
 
     font-weight: 700;
 }
@@ -440,8 +421,8 @@ p {
     font-size: 12px;
 }
 
-.company-header > span {
-    padding-top: 5px;
+.company-date {
+    padding-top: 25px;
 
     color: var(--muted);
 
@@ -456,136 +437,81 @@ p {
 
 
 /* =========================================
-   CAREER PROGRESSION
+   COMPANY ROLE
 ========================================= */
 
-.career-progression {
-    max-width: 820px;
+.company-role {
+    display: flex;
 
-    margin-top: 48px;
+    justify-content: space-between;
 
-    padding: 26px 30px 30px;
+    align-items: flex-end;
 
-    background: var(--background);
+    gap: 40px;
 
-    border: 1px solid var(--border);
+    padding: 30px 0;
+
+    border-bottom: 1px solid var(--border);
 }
 
-.progression-label {
-    margin-bottom: 24px;
-
+.role-main > p {
     color: var(--muted-light);
-
-    font-size: 9px;
-
-    font-weight: 800;
-
-    letter-spacing: 0.16em;
-}
-
-.career-step {
-    display: grid;
-
-    grid-template-columns: 150px 1fr;
-
-    gap: 30px;
-
-    align-items: start;
-}
-
-.career-step-date {
-    color: var(--accent-dark);
-
-    font-size: 11px;
-
-    font-weight: 750;
-
-    line-height: 1.5;
-}
-
-.career-step h3 {
-    font-size: 21px;
-
-    line-height: 1.2;
-
-    letter-spacing: -0.025em;
-
-    font-weight: 650;
-}
-
-.promotion-label {
-    display: inline-block;
-
-    margin-top: 7px;
-
-    color: var(--accent-dark);
 
     font-size: 8px;
 
     font-weight: 800;
 
-    letter-spacing: 0.14em;
+    letter-spacing: 0.15em;
 }
 
-.career-arrow {
-    margin:
-        8px
-        0
-        8px
-        148px;
+.role-main h3 {
+    max-width: 760px;
 
-    color: var(--muted-light);
-
-    font-size: 14px;
-}
-
-
-/* =========================================
-   STANDARD ROLE
-========================================= */
-
-.role-heading {
-    margin-top: 48px;
-
-    padding-bottom: 28px;
-
-    border-bottom: 1px solid var(--border);
-}
-
-.role-date {
-    color: var(--accent-dark);
-
-    font-size: 9px;
-
-    font-weight: 800;
-
-    letter-spacing: 0.13em;
-}
-
-.role-heading h3 {
     margin-top: 9px;
 
     font-size:
-        clamp(24px, 3vw, 34px);
+        clamp(21px, 2.3vw, 29px);
 
-    line-height: 1.1;
+    line-height: 1.2;
 
-    letter-spacing: -0.04em;
+    letter-spacing: -0.035em;
 
     font-weight: 650;
 }
 
-.role-specialties {
-    margin-top: 11px;
+.role-main h3 span {
+    color: var(--accent);
+
+    padding: 0 5px;
+}
+
+.role-dates {
+    display: flex;
+
+    gap: 20px;
 
     color: var(--muted);
 
-    font-size: 12px;
+    font-size: 9px;
 
-    font-weight: 600;
+    white-space: nowrap;
 }
 
-.role-specialties span {
+.role-focus {
+    max-width: 390px;
+
+    color: var(--muted);
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    text-align: right;
+
+    line-height: 1.6;
+}
+
+.role-focus span {
     color: var(--muted-light);
 
     margin: 0 4px;
@@ -597,7 +523,7 @@ p {
 ========================================= */
 
 .experience-story {
-    max-width: 790px;
+    max-width: 800px;
 
     margin-top: 38px;
 }
@@ -614,6 +540,68 @@ p {
 
 .experience-story p:last-child {
     margin-bottom: 0;
+}
+
+
+/* =========================================
+   ACHIEVEMENT STRIPS
+========================================= */
+
+.achievement-strip {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    margin-top: 45px;
+
+    background: var(--dark);
+
+    color: white;
+}
+
+.achievement-strip.four-column {
+    grid-template-columns:
+        repeat(4, 1fr);
+}
+
+.achievement {
+    min-height: 145px;
+
+    padding: 25px 23px;
+
+    border-right: 1px solid #333333;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.achievement:last-child {
+    border-right: none;
+}
+
+.achievement strong {
+    font-size:
+        clamp(23px, 2.4vw, 31px);
+
+    line-height: 1;
+
+    letter-spacing: -0.045em;
+
+    font-weight: 700;
+}
+
+.achievement span {
+    color: #999999;
+
+    font-size: 9px;
+
+    line-height: 1.5;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.05em;
 }
 
 
@@ -780,66 +768,6 @@ p {
 
 
 /* =========================================
-   BEYOND WORK
-========================================= */
-
-.beyond-grid {
-    display: grid;
-
-    grid-template-columns:
-        repeat(2, 1fr);
-
-    gap: 1px;
-
-    margin-top: 70px;
-
-    background: var(--border);
-
-    border: 1px solid var(--border);
-}
-
-.beyond-card {
-    min-height: 230px;
-
-    padding: 35px;
-
-    background: var(--background);
-}
-
-.beyond-card > span {
-    color: var(--accent-dark);
-
-    font-size: 9px;
-
-    font-weight: 800;
-
-    letter-spacing: 0.14em;
-}
-
-.beyond-card h3 {
-    margin-top: 45px;
-
-    font-size: 26px;
-
-    line-height: 1.1;
-
-    letter-spacing: -0.035em;
-}
-
-.beyond-card p {
-    max-width: 450px;
-
-    margin-top: 12px;
-
-    color: var(--muted);
-
-    font-size: 13px;
-
-    line-height: 1.7;
-}
-
-
-/* =========================================
    CONTACT
 ========================================= */
 
@@ -944,12 +872,12 @@ footer .container {
 
 @media (max-width: 1000px) {
 
-    .numbers-grid {
+    .personal-grid {
         grid-template-columns:
-            repeat(3, 1fr);
+            repeat(2, 1fr);
     }
 
-    .number-item:nth-child(4) {
+    .number-item:nth-child(odd) {
         border-left: 1px solid #333333;
     }
 
@@ -958,6 +886,15 @@ footer .container {
         grid-template-columns: 1fr;
 
         gap: 45px;
+    }
+
+    .achievement-strip.four-column {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .achievement:nth-child(2) {
+        border-right: none;
     }
 
 }
@@ -981,26 +918,30 @@ footer .container {
     /* HERO */
 
     .hero {
-        padding: 58px 0 55px;
+        padding: 34px 0 48px;
+    }
+
+    .hero .eyebrow {
+        font-size: 8px;
     }
 
     .hero h1 {
-        margin-top: 15px;
+        margin-top: 12px;
 
         font-size:
-            clamp(48px, 15vw, 70px);
+            clamp(42px, 14vw, 62px);
 
         line-height: 0.9;
     }
 
     .hero h2 {
-        margin-top: 25px;
+        margin-top: 22px;
 
-        font-size: 27px;
+        font-size: 25px;
     }
 
     .hero-specialties {
-        font-size: 12px;
+        font-size: 11px;
 
         line-height: 1.8;
     }
@@ -1010,29 +951,29 @@ footer .container {
     }
 
 
-    /* NUMBERS */
+    /* PERSONAL NUMBERS */
 
-    .numbers-grid {
+    .personal-grid {
         grid-template-columns:
             repeat(2, 1fr);
     }
 
     .number-item {
-        min-height: 125px;
+        min-height: 145px;
 
-        padding: 25px 18px;
-    }
-
-    .number-item:nth-child(odd) {
-        border-left: 1px solid #333333;
+        padding: 23px 17px;
     }
 
     .number-item strong {
-        font-size: 22px;
+        font-size: 21px;
     }
 
     .number-item span {
-        font-size: 9px;
+        font-size: 8px;
+    }
+
+    .number-item em {
+        font-size: 8px;
     }
 
 
@@ -1050,70 +991,112 @@ footer .container {
 
     /* EXPERIENCE */
 
-    .experience-company {
-        margin-top: 45px;
-
-        padding:
-            42px
-            0
-            55px;
+    .experience-section {
+        padding-bottom: 75px;
     }
 
-    .experience-company + .experience-company {
-        margin-top: 10px;
+    .experience-company {
+        margin-top: 48px;
+
+        padding-bottom: 55px;
     }
 
     .company-header {
         flex-direction: column;
 
-        gap: 12px;
+        gap: 10px;
+
+        padding-bottom: 22px;
     }
 
-    .company-header > span {
-        white-space: normal;
+    .company-header h2 {
+        font-size: 40px;
     }
 
-    .career-progression {
-        margin-top: 35px;
+    .company-date {
+        padding-top: 0;
 
-        padding: 23px 20px 25px;
-    }
-
-    .career-step {
-        grid-template-columns:
-            1fr;
-
-        gap: 5px;
-    }
-
-    .career-step-date {
         font-size: 10px;
     }
 
-    .career-step h3 {
-        font-size: 19px;
+    .company-role {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 18px;
+
+        padding: 25px 0;
     }
 
-    .career-arrow {
-        margin:
-            7px
-            0
-            7px
-            0;
+    .role-main h3 {
+        font-size: 21px;
+
+        line-height: 1.3;
     }
 
-    .role-heading {
-        margin-top: 35px;
+    .role-dates {
+        flex-direction: column;
+
+        gap: 4px;
+
+        font-size: 9px;
+    }
+
+    .role-focus {
+        max-width: none;
+
+        text-align: left;
+
+        font-size: 10px;
     }
 
     .experience-story {
-        margin-top: 30px;
+        margin-top: 28px;
     }
 
     .experience-story p {
         font-size: 14px;
 
         line-height: 1.75;
+    }
+
+
+    /* ACHIEVEMENT STRIPS */
+
+    .achievement-strip,
+    .achievement-strip.four-column {
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        margin-top: 35px;
+    }
+
+    .achievement {
+        min-height: 125px;
+
+        padding: 21px 17px;
+    }
+
+    .achievement:nth-child(2) {
+        border-right: none;
+    }
+
+    .achievement:nth-child(3) {
+        border-top: 1px solid #333333;
+    }
+
+    .achievement:nth-child(4) {
+        border-top: 1px solid #333333;
+        border-right: none;
+    }
+
+    .achievement strong {
+        font-size: 21px;
+    }
+
+    .achievement span {
+        font-size: 8px;
     }
 
 
@@ -1142,27 +1125,6 @@ footer .container {
 
     .project-placeholder {
         padding: 23px 0;
-    }
-
-
-    /* BEYOND */
-
-    .beyond-grid {
-        grid-template-columns: 1fr;
-
-        margin-top: 50px;
-    }
-
-    .beyond-card {
-        min-height: auto;
-
-        padding: 30px;
-    }
-
-    .beyond-card h3 {
-        margin-top: 35px;
-
-        font-size: 24px;
     }
 
 
