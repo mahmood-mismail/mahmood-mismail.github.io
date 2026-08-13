@@ -14,7 +14,7 @@
 
 
 /* =========================================
-RESET
+   RESET
 ========================================= */
 
 * {
@@ -60,7 +60,7 @@ p {
 
 
 /* =========================================
-NAVIGATION
+   NAVIGATION
 ========================================= */
 
 .site-header {
@@ -79,7 +79,7 @@ NAVIGATION
 .nav-container {
     width: min(var(--max-width), 90%);
 
-    min-height: 60px;
+    min-height: 68px;
 
     margin: 0 auto;
 
@@ -89,8 +89,8 @@ NAVIGATION
 }
 
 .logo {
-    width: 32px;
-    height: 32px;
+    width: 36px;
+    height: 36px;
 
     display: flex;
     align-items: center;
@@ -99,7 +99,7 @@ NAVIGATION
     background: var(--dark);
     color: white;
 
-    font-size: 11px;
+    font-size: 12px;
     font-weight: 800;
 
     letter-spacing: -0.04em;
@@ -117,9 +117,9 @@ NAVIGATION
 .nav-links {
     display: flex;
     align-items: center;
-    gap: 30px;
+    gap: 32px;
 
-    font-size: 11px;
+    font-size: 12px;
     font-weight: 650;
 }
 
@@ -135,20 +135,20 @@ NAVIGATION
 
 
 /* =========================================
-HERO
+   HERO
 ========================================= */
 
 .hero {
-    padding: 28px 0 48px;
+    padding: 34px 0 58px;
 
     border-bottom: 1px solid var(--border);
 }
 
 .hero h1 {
-    max-width: 520px;
+    margin-top: 0;
 
     font-size:
-        clamp(42px, 4.8vw, 58px);
+        clamp(44px, 5vw, 64px);
 
     line-height: 0.88;
 
@@ -158,14 +158,14 @@ HERO
 }
 
 .hero h2 {
-    max-width: 760px;
+    max-width: 820px;
 
-    margin-top: 20px;
+    margin-top: 25px;
 
     font-size:
-        clamp(20px, 2.1vw, 29px);
+        clamp(23px, 2.8vw, 36px);
 
-    line-height: 1.08;
+    line-height: 1.05;
 
     letter-spacing: -0.045em;
 
@@ -173,13 +173,17 @@ HERO
 }
 
 .hero-specialties {
-    margin-top: 12px;
+    max-width: 980px;
+
+    margin-top: 15px;
 
     color: var(--accent-dark);
 
-    font-size: 12px;
+    font-size: 13px;
 
     font-weight: 700;
+
+    line-height: 1.8;
 }
 
 .hero-specialties span {
@@ -191,53 +195,58 @@ HERO
 .hero-description {
     max-width: 680px;
 
-    margin-top: 16px;
+    margin-top: 18px;
 
     color: var(--muted);
 
-    font-size: 14px;
+    font-size: 15px;
 
     line-height: 1.7;
 }
 
 
 /* =========================================
-PERSONAL ACHIEVEMENTS
+   ACHIEVEMENT SECTIONS
 ========================================= */
 
-.numbers-section {
+.achievement-section {
     background: var(--dark);
     color: white;
 }
 
-.numbers-inner {
-    width: min(var(--max-width), 90%);
-    margin: 0 auto;
+.achievement-section > .container {
+    padding-top: 34px;
 }
 
-.numbers-label {
-    padding: 22px 0 0;
+.achievement-section-label,
+.professional-achievement-heading {
+    color: #888888;
 
-    color: #777777;
+    font-size: 11px;
 
-    font-size: 9px;
     font-weight: 800;
 
-    letter-spacing: 0.17em;
+    letter-spacing: 0.18em;
+
+    text-transform: uppercase;
 }
 
 .numbers-grid {
+    width: min(var(--max-width), 90%);
+    margin: 0 auto;
+
     display: grid;
 }
 
 .personal-grid {
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns:
+        repeat(5, 1fr);
 }
 
 .number-item {
-    min-height: 168px;
+    min-height: 210px;
 
-    padding: 25px 20px 26px;
+    padding: 27px 22px;
 
     border-right: 1px solid #333333;
 
@@ -250,55 +259,117 @@ PERSONAL ACHIEVEMENTS
     border-left: 1px solid #333333;
 }
 
-.number-item strong {
-    max-width: 170px;
+.achievement-top {
+    display: flex;
 
-    font-size: 21px;
+    align-items: flex-start;
 
-    line-height: 1.03;
+    justify-content: space-between;
+
+    gap: 12px;
+}
+
+.achievement-label {
+    color: #ffffff;
+
+    font-size: 11px;
+
+    line-height: 1.25;
+
+    letter-spacing: 0.08em;
+
+    font-weight: 800;
+}
+
+.achievement-icon {
+    flex: 0 0 auto;
+
+    min-width: 26px;
+    height: 26px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #444444;
+
+    color: #bbbbbb;
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: -0.02em;
+}
+
+.trend-icon {
+    font-size: 17px;
+
+    border: none;
+
+    color: #bbbbbb;
+}
+
+.football-icon {
+    font-size: 12px;
+}
+
+.achievement-value {
+    display: block;
+
+    margin-top: 18px;
+
+    color: white;
+
+    font-size:
+        clamp(22px, 2vw, 29px);
+
+    line-height: 1;
 
     letter-spacing: -0.045em;
 
-    font-weight: 750;
+    font-weight: 700;
 }
 
-.number-item span {
-    color: #b0b0b0;
+.achievement-description {
+    display: block;
 
-    font-size: 11px;
+    margin-top: 13px;
+
+    color: #aaaaaa;
+
+    font-size: 10px;
 
     line-height: 1.55;
 
     text-transform: uppercase;
 
-    letter-spacing: 0.035em;
+    letter-spacing: 0.045em;
 }
 
 .number-item em {
     display: block;
 
-    margin-top: 6px;
+    margin-top: 7px;
 
-    color: #eeeeee;
+    color: #dddddd;
 
-    font-size: 10px;
+    font-size: 9px;
 
     font-style: normal;
 
     line-height: 1.5;
-
-    text-transform: none;
 
     letter-spacing: 0;
 }
 
 
 /* =========================================
-GENERAL SECTIONS
+   GENERAL SECTIONS
 ========================================= */
 
 .section {
-    padding: 100px 0;
+    padding: 105px 0;
 
     border-bottom: 1px solid var(--border);
 }
@@ -308,7 +379,7 @@ GENERAL SECTIONS
 }
 
 .section-label {
-    font-size: 9px;
+    font-size: 12px;
 
     font-weight: 800;
 
@@ -319,24 +390,24 @@ GENERAL SECTIONS
 
 
 /* =========================================
-ABOUT
+   ABOUT
 ========================================= */
 
 .section-grid {
     display: grid;
 
     grid-template-columns:
-        0.9fr
-        1.1fr;
+        0.95fr
+        1.05fr;
 
-    gap: 85px;
+    gap: 90px;
 
-    margin-top: 55px;
+    margin-top: 60px;
 }
 
 .section-grid h2 {
     font-size:
-        clamp(38px, 4.4vw, 57px);
+        clamp(40px, 4.7vw, 62px);
 
     line-height: 0.98;
 
@@ -354,30 +425,31 @@ ABOUT
 
     color: var(--muted);
 
-    font-size: 14px;
+    font-size: 15px;
 
     line-height: 1.78;
 }
 
 
 /* =========================================
-EXPERIENCE
+   EXPERIENCE
 ========================================= */
 
 .experience-section {
-    padding-bottom: 95px;
+    padding-bottom: 100px;
 }
 
 .experience-company {
-    margin-top: 62px;
+    margin-top: 60px;
 
-    padding: 0 0 70px;
+    padding: 0 0 75px;
 
     border-bottom: 1px solid var(--border);
 }
 
 .experience-company:last-child {
     border-bottom: none;
+
     padding-bottom: 0;
 }
 
@@ -390,32 +462,28 @@ EXPERIENCE
 
     gap: 40px;
 
-    padding-bottom: 20px;
+    padding-bottom: 25px;
 
-    border-bottom: 1px solid #bcbcb7;
-}
-
-.company-heading {
-    min-width: 0;
+    border-bottom: 2px solid var(--text);
 }
 
 .company-kicker {
-    margin-bottom: 7px;
+    margin-bottom: 8px;
 
     color: var(--accent-dark);
 
-    font-size: 8px;
+    font-size: 9px;
 
     font-weight: 800;
 
-    letter-spacing: 0.14em;
+    letter-spacing: 0.15em;
 }
 
 .company-header h2 {
     font-size:
-        clamp(29px, 3vw, 39px);
+        clamp(30px, 3.2vw, 42px);
 
-    line-height: 1;
+    line-height: 0.98;
 
     letter-spacing: -0.055em;
 
@@ -423,7 +491,7 @@ EXPERIENCE
 }
 
 .company-location {
-    margin-top: 5px;
+    margin-top: 7px;
 
     color: var(--muted);
 
@@ -431,11 +499,11 @@ EXPERIENCE
 }
 
 .company-date {
-    padding-top: 17px;
+    padding-top: 20px;
 
     color: var(--muted);
 
-    font-size: 10px;
+    font-size: 11px;
 
     font-weight: 650;
 
@@ -446,34 +514,30 @@ EXPERIENCE
 
 
 /* =========================================
-CAREER PROGRESSION
+   COMPANY ROLE
 ========================================= */
 
-.career-progression {
-    padding: 20px 0 18px;
+.company-role {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-end;
+
+    gap: 40px;
+
+    padding: 28px 0;
 
     border-bottom: 1px solid var(--border);
 }
 
-.career-progression > span {
-    display: block;
-
-    margin-bottom: 7px;
-
-    color: var(--muted-light);
-
-    font-size: 8px;
-
-    font-weight: 800;
-
-    letter-spacing: 0.14em;
-}
-
-.career-progression h3 {
+.role-main h3 {
     max-width: 850px;
 
+    margin-top: 0;
+
     font-size:
-        clamp(18px, 2vw, 24px);
+        clamp(20px, 2.1vw, 27px);
 
     line-height: 1.25;
 
@@ -482,24 +546,22 @@ CAREER PROGRESSION
     font-weight: 650;
 }
 
-.career-progression h3 b {
+.role-main h3 span {
     color: var(--accent);
 
-    padding: 0 6px;
-
-    font-weight: 500;
+    padding: 0 5px;
 }
 
 .role-focus {
-    max-width: 700px;
-
-    margin-top: 15px;
+    max-width: 390px;
 
     color: var(--muted);
 
-    font-size: 10px;
+    font-size: 11px;
 
     font-weight: 600;
+
+    text-align: right;
 
     line-height: 1.6;
 }
@@ -510,43 +572,25 @@ CAREER PROGRESSION
     margin: 0 4px;
 }
 
-.career-timeline {
-    display: grid;
-
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-
-    max-width: 700px;
-
-    margin-top: 10px;
-
-    color: var(--muted-light);
-
-    font-size: 9px;
-
-    font-weight: 650;
-
-    letter-spacing: 0.03em;
-}
-
 
 /* =========================================
-EXPERIENCE STORY
+   EXPERIENCE STORY
 ========================================= */
 
 .experience-story {
-    max-width: 850px;
+    max-width: 800px;
 
-    margin-top: 30px;
+    margin-top: 38px;
 }
 
 .experience-story p {
-    margin-bottom: 18px;
+    margin-bottom: 20px;
 
     color: var(--muted);
 
-    font-size: 14px;
+    font-size: 15px;
 
-    line-height: 1.78;
+    line-height: 1.8;
 }
 
 .experience-story p:last-child {
@@ -555,40 +599,37 @@ EXPERIENCE STORY
 
 
 /* =========================================
-PROFESSIONAL ACHIEVEMENTS
+   PROFESSIONAL ACHIEVEMENTS
 ========================================= */
 
-.achievement-heading {
-    margin-top: 34px;
-    margin-bottom: 8px;
+.professional-achievement-heading {
+    margin-top: 42px;
 
-    color: var(--muted-light);
-
-    font-size: 8px;
-
-    font-weight: 800;
-
-    letter-spacing: 0.16em;
+    margin-bottom: 13px;
 }
 
 .achievement-strip {
     display: grid;
 
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns:
+        repeat(2, 1fr);
 
     background: var(--dark);
 
     color: white;
+
+    border: 1px solid #333333;
 }
 
 .achievement-strip.four-column {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns:
+        repeat(4, 1fr);
 }
 
 .achievement {
-    min-height: 138px;
+    min-height: 145px;
 
-    padding: 23px 21px;
+    padding: 24px 22px;
 
     border-right: 1px solid #333333;
 
@@ -601,36 +642,93 @@ PROFESSIONAL ACHIEVEMENTS
     border-right: none;
 }
 
-.achievement strong {
-    max-width: 190px;
+.achievement .achievement-value {
+    margin-top: 0;
 
     font-size:
-        clamp(22px, 2.2vw, 29px);
-
-    line-height: 1;
-
-    letter-spacing: -0.045em;
-
-    font-weight: 750;
+        clamp(21px, 2.2vw, 29px);
 }
 
-.achievement span {
-    max-width: 240px;
+.achievement .achievement-description {
+    margin-top: 16px;
 
-    color: #b0b0b0;
-
-    font-size: 10px;
-
-    line-height: 1.5;
-
-    text-transform: uppercase;
-
-    letter-spacing: 0.045em;
+    font-size: 9px;
 }
 
 
 /* =========================================
-EXPERTISE
+   COMMERCIAL EXPERTISE
+========================================= */
+
+.commercial-expertise {
+    margin-top: 70px;
+
+    display: grid;
+
+    grid-template-columns: 0.75fr 1.25fr;
+
+    background: var(--dark);
+
+    color: white;
+
+    border: 1px solid #333333;
+}
+
+.commercial-expertise-header {
+    padding: 28px 30px;
+
+    border-right: 1px solid #333333;
+
+    display: flex;
+
+    align-items: flex-start;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    color: #999999;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.16em;
+}
+
+.commercial-icon {
+    color: #bbbbbb;
+
+    font-size: 17px;
+}
+
+.commercial-expertise-content {
+    padding: 28px 30px;
+}
+
+.commercial-expertise-content strong {
+    display: block;
+
+    font-size: 19px;
+
+    line-height: 1.2;
+
+    letter-spacing: -0.025em;
+}
+
+.commercial-expertise-content p {
+    margin-top: 12px;
+
+    color: #999999;
+
+    font-size: 12px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   EXPERTISE
 ========================================= */
 
 .expertise-intro {
@@ -642,12 +740,12 @@ EXPERTISE
 
     gap: 90px;
 
-    margin-top: 55px;
+    margin-top: 60px;
 }
 
 .expertise-intro h2 {
     font-size:
-        clamp(38px, 4.4vw, 57px);
+        clamp(40px, 4.7vw, 62px);
 
     line-height: 0.98;
 
@@ -661,7 +759,7 @@ EXPERTISE
 
     color: var(--muted);
 
-    font-size: 14px;
+    font-size: 15px;
 
     line-height: 1.78;
 }
@@ -674,7 +772,7 @@ EXPERTISE
 
     gap: 1px;
 
-    margin-top: 65px;
+    margin-top: 70px;
 
     background: var(--border);
 
@@ -682,9 +780,9 @@ EXPERTISE
 }
 
 .expertise-card {
-    min-height: 270px;
+    min-height: 285px;
 
-    padding: 30px;
+    padding: 34px;
 
     background: var(--background);
 
@@ -702,7 +800,7 @@ EXPERTISE
 .expertise-card > span {
     color: var(--accent-dark);
 
-    font-size: 8px;
+    font-size: 9px;
 
     font-weight: 800;
 
@@ -710,9 +808,9 @@ EXPERTISE
 }
 
 .expertise-card h3 {
-    margin-top: 38px;
+    margin-top: 42px;
 
-    font-size: 22px;
+    font-size: 25px;
 
     line-height: 1.1;
 
@@ -722,24 +820,24 @@ EXPERTISE
 }
 
 .expertise-card p {
-    margin-top: 14px;
+    margin-top: 15px;
 
     color: var(--muted);
 
-    font-size: 12px;
+    font-size: 13px;
 
     line-height: 1.7;
 }
 
 
 /* =========================================
-PROJECTS
+   PROJECTS
 ========================================= */
 
 .project-placeholder {
-    margin-top: 28px;
+    margin-top: 30px;
 
-    padding: 23px 0;
+    padding: 25px 0;
 
     border-top: 1px solid var(--border);
 }
@@ -747,7 +845,7 @@ PROJECTS
 .project-placeholder > span {
     color: var(--accent-dark);
 
-    font-size: 8px;
+    font-size: 9px;
 
     font-weight: 800;
 
@@ -755,9 +853,9 @@ PROJECTS
 }
 
 .project-placeholder h3 {
-    margin-top: 8px;
+    margin-top: 9px;
 
-    font-size: 20px;
+    font-size: 22px;
 
     line-height: 1.15;
 
@@ -767,11 +865,11 @@ PROJECTS
 }
 
 .project-placeholder p {
-    margin-top: 8px;
+    margin-top: 9px;
 
     color: var(--muted);
 
-    font-size: 12px;
+    font-size: 13px;
 
     line-height: 1.65;
 }
@@ -779,11 +877,11 @@ PROJECTS
 .project-placeholder small {
     display: inline-block;
 
-    margin-top: 10px;
+    margin-top: 11px;
 
     color: var(--muted-light);
 
-    font-size: 7px;
+    font-size: 8px;
 
     font-weight: 800;
 
@@ -792,7 +890,7 @@ PROJECTS
 
 
 /* =========================================
-CONTACT
+   CONTACT
 ========================================= */
 
 .contact-section {
@@ -808,10 +906,10 @@ CONTACT
 }
 
 .contact-section h2 {
-    margin-top: 25px;
+    margin-top: 28px;
 
     font-size:
-        clamp(52px, 7vw, 88px);
+        clamp(55px, 8vw, 100px);
 
     line-height: 0.9;
 
@@ -821,13 +919,13 @@ CONTACT
 }
 
 .contact-section > .container > p:not(.section-label) {
-    max-width: 650px;
+    max-width: 610px;
 
-    margin-top: 27px;
+    margin-top: 30px;
 
     color: #999999;
 
-    font-size: 14px;
+    font-size: 15px;
 
     line-height: 1.75;
 }
@@ -837,9 +935,9 @@ CONTACT
 
     flex-wrap: wrap;
 
-    gap: 26px;
+    gap: 28px;
 
-    margin-top: 35px;
+    margin-top: 40px;
 }
 
 .contact-links a {
@@ -849,7 +947,7 @@ CONTACT
 
     color: white;
 
-    font-size: 11px;
+    font-size: 12px;
 
     font-weight: 700;
 
@@ -866,17 +964,17 @@ CONTACT
 
 
 /* =========================================
-FOOTER
+   FOOTER
 ========================================= */
 
 footer {
-    padding: 22px 0;
+    padding: 23px 0;
 
     background: var(--dark);
 
     color: #666666;
 
-    font-size: 9px;
+    font-size: 10px;
 
     border-top: 1px solid #292929;
 }
@@ -891,20 +989,17 @@ footer .container {
 
 
 /* =========================================
-TABLET
+   TABLET
 ========================================= */
 
 @media (max-width: 1100px) {
 
     .personal-grid {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns:
+            repeat(3, 1fr);
     }
 
     .number-item:nth-child(4) {
-        border-left: 1px solid #333333;
-    }
-
-    .number-item:nth-child(5) {
         border-left: 1px solid #333333;
     }
 
@@ -912,40 +1007,37 @@ TABLET
     .expertise-intro {
         grid-template-columns: 1fr;
 
-        gap: 40px;
+        gap: 45px;
     }
 
     .achievement-strip.four-column {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns:
+            repeat(2, 1fr);
     }
 
     .achievement:nth-child(2) {
         border-right: none;
     }
 
-    .achievement:nth-child(3),
-    .achievement:nth-child(4) {
+    .achievement:nth-child(3) {
         border-top: 1px solid #333333;
     }
 
-    .achievement:nth-child(3) {
-        border-right: 1px solid #333333;
-    }
-
     .achievement:nth-child(4) {
+        border-top: 1px solid #333333;
         border-right: none;
     }
 }
 
 
 /* =========================================
-MOBILE
+   MOBILE
 ========================================= */
 
 @media (max-width: 700px) {
 
     .nav-container {
-        min-height: 56px;
+        min-height: 62px;
     }
 
     .nav-links {
@@ -956,137 +1048,152 @@ MOBILE
     /* HERO */
 
     .hero {
-        padding: 24px 0 38px;
+        padding: 27px 0 43px;
     }
 
     .hero h1 {
         font-size:
-            clamp(39px, 12vw, 50px);
+            clamp(42px, 14vw, 58px);
 
-        line-height: 0.89;
+        line-height: 0.9;
     }
 
     .hero h2 {
-        margin-top: 17px;
+        margin-top: 21px;
 
-        font-size: 20px;
-
-        line-height: 1.08;
+        font-size: 24px;
     }
 
     .hero-specialties {
-        margin-top: 10px;
+        margin-top: 13px;
 
         font-size: 10px;
 
-        line-height: 1.8;
+        line-height: 1.85;
     }
 
     .hero-description {
-        margin-top: 13px;
+        margin-top: 16px;
 
-        font-size: 13px;
-
-        line-height: 1.7;
+        font-size: 14px;
     }
 
 
     /* PERSONAL ACHIEVEMENTS */
 
-    .numbers-label {
-        padding-top: 18px;
+    .achievement-section > .container {
+        padding-top: 27px;
+    }
 
-        font-size: 8px;
+    .achievement-section-label {
+        font-size: 10px;
     }
 
     .personal-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns:
+            repeat(2, 1fr);
     }
 
     .number-item {
-        min-height: 145px;
+        min-height: 185px;
 
-        padding: 21px 15px 20px;
-    }
+        padding: 21px 17px;
 
-    .number-item strong {
-        max-width: 145px;
-
-        font-size: 18px;
-
-        line-height: 1.04;
-    }
-
-    .number-item span {
-        font-size: 9px;
-
-        line-height: 1.5;
-    }
-
-    .number-item em {
-        margin-top: 5px;
-
-        font-size: 9px;
+        border-bottom: 1px solid #333333;
     }
 
     .number-item:nth-child(odd) {
         border-left: 1px solid #333333;
     }
 
+    .number-item:nth-child(even) {
+        border-right: none;
+    }
+
     .number-item:nth-child(5) {
         grid-column: 1 / -1;
 
         border-left: 1px solid #333333;
+        border-right: 1px solid #333333;
+
+        border-bottom: none;
+    }
+
+    .achievement-label {
+        font-size: 9px;
+    }
+
+    .achievement-value {
+        margin-top: 15px;
+
+        font-size: 21px;
+    }
+
+    .achievement-description {
+        font-size: 8px;
+
+        line-height: 1.55;
+    }
+
+    .number-item em {
+        font-size: 8px;
+    }
+
+    .achievement-icon {
+        min-width: 23px;
+
+        height: 23px;
+
+        font-size: 8px;
+    }
+
+    .trend-icon {
+        font-size: 15px;
     }
 
 
     /* SECTIONS */
 
     .section {
-        padding: 72px 0;
+        padding: 80px 0;
+    }
+
+    .section-label {
+        font-size: 11px;
     }
 
     .section-grid,
     .expertise-intro {
-        margin-top: 42px;
-    }
-
-    .section-grid h2,
-    .expertise-intro h2 {
-        font-size: 38px;
+        margin-top: 45px;
     }
 
 
     /* EXPERIENCE */
 
     .experience-section {
-        padding-bottom: 65px;
+        padding-bottom: 75px;
     }
 
     .experience-company {
         margin-top: 48px;
 
-        padding-bottom: 52px;
+        padding-bottom: 55px;
     }
 
     .company-header {
         flex-direction: column;
 
-        gap: 8px;
+        gap: 9px;
 
-        padding-bottom: 18px;
+        padding-bottom: 21px;
     }
 
     .company-kicker {
-        font-size: 7px;
-
-        line-height: 1.5;
+        font-size: 8px;
     }
 
     .company-header h2 {
-        font-size: 29px;
-
-        line-height: 1;
+        font-size: 32px;
     }
 
     .company-location {
@@ -1096,53 +1203,39 @@ MOBILE
     .company-date {
         padding-top: 0;
 
-        font-size: 9px;
+        font-size: 10px;
     }
 
+    .company-role {
+        flex-direction: column;
 
-    /* CAREER PROGRESSION */
+        align-items: flex-start;
 
-    .career-progression {
-        padding: 18px 0 16px;
+        gap: 17px;
+
+        padding: 24px 0;
     }
 
-    .career-progression > span {
-        font-size: 7px;
-    }
-
-    .career-progression h3 {
-        font-size: 17px;
+    .role-main h3 {
+        font-size: 20px;
 
         line-height: 1.35;
     }
 
-    .career-progression h3 b {
-        padding: 0 3px;
-    }
-
     .role-focus {
-        margin-top: 12px;
+        max-width: none;
 
-        font-size: 9px;
+        text-align: left;
 
-        line-height: 1.65;
+        font-size: 10px;
     }
-
-    .career-timeline {
-        grid-template-columns: 1fr 1fr;
-
-        font-size: 8px;
-    }
-
-
-    /* STORY */
 
     .experience-story {
-        margin-top: 24px;
+        margin-top: 27px;
     }
 
     .experience-story p {
-        font-size: 13px;
+        font-size: 14px;
 
         line-height: 1.75;
     }
@@ -1150,37 +1243,28 @@ MOBILE
 
     /* PROFESSIONAL ACHIEVEMENTS */
 
-    .achievement-heading {
-        margin-top: 28px;
+    .professional-achievement-heading {
+        margin-top: 35px;
 
-        margin-bottom: 7px;
-
-        font-size: 7px;
+        font-size: 9px;
     }
 
     .achievement-strip,
     .achievement-strip.four-column {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns:
+            repeat(2, 1fr);
 
-        margin-top: 0;
+        margin-top: 12px;
     }
 
     .achievement {
-        min-height: 128px;
+        min-height: 130px;
 
-        padding: 20px 15px;
-    }
+        padding: 19px 16px;
 
-    .achievement strong {
-        font-size: 19px;
+        border-right: 1px solid #333333;
 
-        line-height: 1.02;
-    }
-
-    .achievement span {
-        font-size: 8px;
-
-        line-height: 1.5;
+        border-bottom: 1px solid #333333;
     }
 
     .achievement:nth-child(2) {
@@ -1188,15 +1272,56 @@ MOBILE
     }
 
     .achievement:nth-child(3) {
-        border-top: 1px solid #333333;
-
-        border-right: 1px solid #333333;
+        border-top: none;
     }
 
     .achievement:nth-child(4) {
-        border-top: 1px solid #333333;
+        border-top: none;
 
         border-right: none;
+    }
+
+    .achievement:last-child {
+        border-right: none;
+    }
+
+    .achievement .achievement-value {
+        font-size: 20px;
+    }
+
+    .achievement .achievement-description {
+        font-size: 8px;
+
+        line-height: 1.55;
+    }
+
+
+    /* COMMERCIAL EXPERTISE */
+
+    .commercial-expertise {
+        grid-template-columns: 1fr;
+
+        margin-top: 50px;
+    }
+
+    .commercial-expertise-header {
+        padding: 21px 20px;
+
+        border-right: none;
+
+        border-bottom: 1px solid #333333;
+    }
+
+    .commercial-expertise-content {
+        padding: 22px 20px;
+    }
+
+    .commercial-expertise-content strong {
+        font-size: 17px;
+    }
+
+    .commercial-expertise-content p {
+        font-size: 11px;
     }
 
 
@@ -1205,40 +1330,26 @@ MOBILE
     .expertise-grid {
         grid-template-columns: 1fr;
 
-        margin-top: 45px;
+        margin-top: 50px;
     }
 
     .expertise-card {
         min-height: auto;
 
-        padding: 26px;
+        padding: 30px;
     }
 
     .expertise-card h3 {
-        margin-top: 31px;
+        margin-top: 35px;
 
-        font-size: 21px;
-    }
-
-    .expertise-card p {
-        font-size: 11px;
-
-        line-height: 1.7;
+        font-size: 23px;
     }
 
 
     /* PROJECTS */
 
     .project-placeholder {
-        padding: 21px 0;
-    }
-
-    .project-placeholder h3 {
-        font-size: 19px;
-    }
-
-    .project-placeholder p {
-        font-size: 11px;
+        padding: 23px 0;
     }
 
 
@@ -1246,19 +1357,13 @@ MOBILE
 
     .contact-section h2 {
         font-size:
-            clamp(48px, 15vw, 72px);
-    }
-
-    .contact-section > .container > p:not(.section-label) {
-        font-size: 13px;
+            clamp(52px, 16vw, 80px);
     }
 
     .contact-links {
         flex-direction: column;
 
         align-items: flex-start;
-
-        gap: 20px;
     }
 
 
