@@ -401,139 +401,246 @@ p {
     min-height: 175px;
 }
 
-
 /* =========================================
    CAREER PROGRESSION
 ========================================= */
 
-.progression-section {
-    padding-top: 62px;
-    padding-bottom: 58px;
+.career-progression {
+    padding: 65px 0 55px;
+    background: var(--background);
+    border-bottom: 1px solid var(--border);
 }
 
-.progression-grid {
-    margin-top: 34px;
-
+.career-grid {
     display: grid;
+    grid-template-columns: repeat(3, 1fr);
 
-    grid-template-columns: 1fr;
+    margin-top: 42px;
 
-    gap: 28px;
-}
-
-.progression-company {
     border-top: 1px solid var(--border);
-
-    padding-top: 20px;
+    border-bottom: 1px solid var(--border);
 }
 
-.progression-company-header {
-    display: flex;
+.career-card {
+    position: relative;
 
-    align-items: baseline;
+    min-height: 350px;
 
-    justify-content: space-between;
+    padding: 42px 40px 32px;
 
-    gap: 30px;
-
-    margin-bottom: 18px;
+    border-right: 1px solid var(--border);
 }
 
-.progression-company-header span {
-    color: var(--muted-light);
-
-    font-size: 10px;
-
-    font-weight: 700;
-
-    letter-spacing: 0.1em;
-
-    white-space: nowrap;
+.career-card:last-child {
+    border-right: none;
 }
 
-.progression-company-header h3 {
-    order: -1;
 
-    font-size: 24px;
+/* NUMBER */
 
-    line-height: 1;
+.career-number {
+    display: block;
 
-    letter-spacing: -0.04em;
-
-    font-weight: 700;
-}
-
-.progression-track {
-    display: flex;
-
-    align-items: stretch;
-
-    width: 100%;
-
-    border: 1px solid var(--border);
-
-    background: var(--surface);
-}
-
-.progression-role {
-    flex: 1;
-
-    min-height: 82px;
-
-    padding: 16px 18px;
-
-    display: flex;
-
-    flex-direction: column;
-
-    justify-content: center;
-}
-
-.progression-role + .progression-role {
-    border-left: 1px solid var(--border);
-}
-
-.progression-date {
     color: var(--accent-dark);
 
-    font-size: 9px;
-
+    font-size: 11px;
     font-weight: 800;
 
-    letter-spacing: 0.05em;
-
-    margin-bottom: 6px;
+    letter-spacing: 0.15em;
 }
 
-.progression-role strong {
-    font-size: 14px;
 
-    line-height: 1.25;
+/* COMPANY */
+
+.career-card h3 {
+    margin-top: 65px;
+
+    font-size: 27px;
+    line-height: 1;
+
+    letter-spacing: -0.045em;
+
+    font-weight: 700;
+}
+
+
+/* ROLE AREA */
+
+.career-roles {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 13px;
+
+    margin-top: 45px;
+}
+
+.career-roles.single-role {
+    display: block;
+}
+
+
+/* INDIVIDUAL ROLE */
+
+.career-role {
+    flex: 1;
+    min-width: 0;
+}
+
+.career-date {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: var(--muted);
+
+    font-size: 10px;
+    line-height: 1.35;
+
+    letter-spacing: 0.01em;
+}
+
+.career-role strong {
+    display: block;
+
+    color: var(--text);
+
+    font-size: 13px;
+    line-height: 1.35;
 
     letter-spacing: -0.015em;
 
-    font-weight: 650;
-}
-
-.progression-arrow {
-    width: 42px;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    background: var(--dark);
-
-    color: var(--accent);
-
-    font-size: 18px;
-
-    font-weight: 700;
+    font-weight: 600;
 }
 
 
+/* PROGRESSION ARROW */
+
+.career-arrow {
+    flex-shrink: 0;
+
+    margin-top: 17px;
+
+    color: var(--accent-dark);
+
+    font-size: 22px;
+    line-height: 1;
+}
+
+
+/* CAREER FOCUS */
+
+.career-focus {
+    position: absolute;
+
+    left: 40px;
+    right: 40px;
+    bottom: 32px;
+
+    color: var(--muted);
+
+    font-size: 11px;
+    line-height: 1.65;
+
+    letter-spacing: 0.01em;
+}
+
+
+/* =========================================
+   CAREER PROGRESSION — TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+    .career-card {
+        padding-left: 28px;
+        padding-right: 28px;
+    }
+
+    .career-focus {
+        left: 28px;
+        right: 28px;
+    }
+
+    .career-card h3 {
+        font-size: 24px;
+    }
+
+    .career-roles {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .career-arrow {
+        display: none;
+    }
+
+}
+
+
+/* =========================================
+   CAREER PROGRESSION — MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+    .career-progression {
+        padding: 55px 0 45px;
+    }
+
+    .career-grid {
+        grid-template-columns: 1fr;
+
+        margin-top: 32px;
+    }
+
+    .career-card {
+        min-height: 0;
+
+        padding: 30px 22px 30px;
+
+        border-right: none;
+        border-bottom: 1px solid var(--border);
+    }
+
+    .career-card:last-child {
+        border-bottom: none;
+    }
+
+    .career-card h3 {
+        margin-top: 35px;
+
+        font-size: 25px;
+    }
+
+    .career-roles {
+        margin-top: 30px;
+
+        gap: 18px;
+    }
+
+    .career-role {
+        width: 100%;
+    }
+
+    .career-date {
+        font-size: 9px;
+        margin-bottom: 6px;
+    }
+
+    .career-role strong {
+        font-size: 13px;
+    }
+
+    .career-focus {
+        position: static;
+
+        margin-top: 28px;
+
+        font-size: 10px;
+    }
+
+}
 /* =========================================
    EXPERIENCE
 ========================================= */
