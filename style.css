@@ -79,7 +79,7 @@ p {
 .nav-container {
     width: min(var(--max-width), 90%);
 
-    min-height: 68px;
+    min-height: 60px;
 
     margin: 0 auto;
 
@@ -89,8 +89,8 @@ p {
 }
 
 .logo {
-    width: 36px;
-    height: 36px;
+    width: 30px;
+    height: 30px;
 
     display: flex;
     align-items: center;
@@ -99,7 +99,7 @@ p {
     background: var(--dark);
     color: white;
 
-    font-size: 12px;
+    font-size: 10px;
     font-weight: 800;
 
     letter-spacing: -0.04em;
@@ -117,9 +117,9 @@ p {
 .nav-links {
     display: flex;
     align-items: center;
-    gap: 32px;
+    gap: 28px;
 
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 650;
 }
 
@@ -139,12 +139,23 @@ p {
 ========================================= */
 
 .hero {
-    padding: 34px 0 48px;
+    padding: 32px 0 38px;
 
     border-bottom: 1px solid var(--border);
 }
 
+.hero .eyebrow {
+    font-size: 9px;
+    font-weight: 800;
+
+    letter-spacing: 0.17em;
+
+    color: var(--muted-light);
+}
+
 .hero h1 {
+    margin-top: 8px;
+
     font-size:
         clamp(44px, 5.2vw, 66px);
 
@@ -158,10 +169,10 @@ p {
 .hero h2 {
     max-width: 820px;
 
-    margin-top: 22px;
+    margin-top: 17px;
 
     font-size:
-        clamp(22px, 2.7vw, 34px);
+        clamp(21px, 2.5vw, 31px);
 
     line-height: 1.05;
 
@@ -171,33 +182,111 @@ p {
 }
 
 .hero-specialties {
-    margin-top: 13px;
+    margin-top: 10px;
 
     color: var(--accent-dark);
 
-    font-size: 12px;
+    font-size: 11px;
 
     font-weight: 700;
 
-    line-height: 1.8;
+    line-height: 1.6;
 }
 
 .hero-specialties span {
     color: var(--muted-light);
 
-    margin: 0 5px;
+    margin: 0 4px;
 }
 
 .hero-description {
     max-width: 680px;
 
-    margin-top: 15px;
+    margin-top: 12px;
 
     color: var(--muted);
 
-    font-size: 14px;
+    font-size: 13px;
 
-    line-height: 1.7;
+    line-height: 1.65;
+}
+
+
+/* =========================================
+   NUMBERS / ACHIEVEMENTS
+========================================= */
+
+.numbers-section {
+    background: var(--dark);
+    color: white;
+}
+
+.numbers-grid {
+    width: min(var(--max-width), 90%);
+    margin: 0 auto;
+
+    display: grid;
+}
+
+.personal-grid {
+    grid-template-columns:
+        repeat(4, 1fr);
+}
+
+.number-item {
+    min-height: 135px;
+
+    padding: 23px 21px;
+
+    border-right: 1px solid #333333;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.number-item:first-child {
+    border-left: 1px solid #333333;
+}
+
+.number-item strong {
+    font-size: 23px;
+
+    line-height: 1;
+
+    letter-spacing: -0.045em;
+
+    font-weight: 700;
+}
+
+.number-item span {
+    color: #999999;
+
+    font-size: 9px;
+
+    line-height: 1.45;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.05em;
+}
+
+.number-item em {
+    display: block;
+
+    margin-top: 4px;
+
+    color: #dddddd;
+
+    font-size: 9px;
+
+    font-style: normal;
+
+    line-height: 1.45;
+
+    text-transform: none;
+
+    letter-spacing: 0;
 }
 
 
@@ -206,7 +295,7 @@ p {
 ========================================= */
 
 .section {
-    padding: 72px 0;
+    padding: 68px 0;
 
     border-bottom: 1px solid var(--border);
 }
@@ -216,7 +305,7 @@ p {
 }
 
 .section-label {
-    font-size: 12px;
+    font-size: 10px;
 
     font-weight: 800;
 
@@ -237,14 +326,14 @@ p {
         0.95fr
         1.05fr;
 
-    gap: 75px;
+    gap: 70px;
 
-    margin-top: 42px;
+    margin-top: 38px;
 }
 
 .section-grid h2 {
     font-size:
-        clamp(38px, 4.4vw, 58px);
+        clamp(36px, 4.3vw, 55px);
 
     line-height: 0.98;
 
@@ -258,13 +347,13 @@ p {
 }
 
 .section-content > p {
-    margin-bottom: 18px;
+    margin-bottom: 17px;
 
     color: var(--muted);
 
-    font-size: 14px;
+    font-size: 13px;
 
-    line-height: 1.75;
+    line-height: 1.7;
 }
 
 .section-content > p:last-child {
@@ -273,149 +362,39 @@ p {
 
 
 /* =========================================
-   ACHIEVEMENT SECTION INTRO
+   CAREER AT A GLANCE / BEYOND WORK
 ========================================= */
 
-.achievement-section-intro {
-    margin-top: 30px;
-
-    margin-bottom: 28px;
-}
-
-.achievement-section-intro h2 {
-    max-width: 650px;
-
-    font-size:
-        clamp(32px, 3.8vw, 50px);
-
-    line-height: 1;
-
-    letter-spacing: -0.055em;
-
-    font-weight: 650;
-}
-
-
-/* =========================================
-   CAREER AT A GLANCE
-========================================= */
-
-.career-glance-section {
-    padding-top: 62px;
-    padding-bottom: 62px;
-}
-
-.career-glance-box,
-.beyond-work-box {
-    display: grid;
-
-    grid-template-columns:
-        repeat(4, 1fr);
-
-    background: var(--dark);
-
-    color: white;
-}
-
-.glance-item {
-    min-height: 170px;
-
-    padding: 23px 22px;
-
-    border-right: 1px solid #333333;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-
-    position: relative;
-}
-
-.glance-item:last-child {
-    border-right: none;
-}
-
-.glance-visual {
-    color: var(--accent);
-
-    font-size: 15px;
-
-    font-weight: 800;
-
-    letter-spacing: -0.03em;
-
-    min-height: 22px;
-}
-
-.glance-item strong {
-    margin-top: 12px;
-
-    font-size: 18px;
-
-    line-height: 1.05;
-
-    letter-spacing: -0.035em;
-
-    font-weight: 700;
-}
-
-.glance-item span {
-    margin-top: 13px;
-
-    color: #c8c8c8;
-
-    font-size: 10px;
-
-    line-height: 1.5;
-
-    text-transform: uppercase;
-
-    letter-spacing: 0.045em;
-}
-
-.glance-item em {
-    display: block;
-
-    margin-top: 6px;
-
-    color: #dddddd;
-
-    font-size: 9px;
-
-    font-style: normal;
-
-    line-height: 1.45;
-}
-
-
-/* =========================================
-   BEYOND WORK
-========================================= */
-
+.career-glance-section,
 .beyond-work-section {
-    padding-top: 62px;
-    padding-bottom: 62px;
+    padding: 48px 0;
 }
 
-.beyond-work-box .glance-item {
-    min-height: 175px;
+.career-glance-section .numbers-section,
+.beyond-work-section .numbers-section {
+    margin-top: 25px;
 }
+
 
 /* =========================================
    CAREER PROGRESSION
 ========================================= */
 
 .career-progression {
-    padding: 65px 0 55px;
+    padding: 48px 0 45px;
+
     background: var(--background);
+
     border-bottom: 1px solid var(--border);
 }
 
 .career-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
 
-    margin-top: 42px;
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    margin-top: 30px;
 
     border-top: 1px solid var(--border);
     border-bottom: 1px solid var(--border);
@@ -424,9 +403,9 @@ p {
 .career-card {
     position: relative;
 
-    min-height: 350px;
+    min-height: 285px;
 
-    padding: 42px 40px 32px;
+    padding: 28px 30px 25px;
 
     border-right: 1px solid var(--border);
 }
@@ -435,27 +414,23 @@ p {
     border-right: none;
 }
 
-
-/* NUMBER */
-
 .career-number {
     display: block;
 
     color: var(--accent-dark);
 
-    font-size: 11px;
+    font-size: 10px;
+
     font-weight: 800;
 
     letter-spacing: 0.15em;
 }
 
-
-/* COMPANY */
-
 .career-card h3 {
-    margin-top: 65px;
+    margin-top: 43px;
 
-    font-size: 27px;
+    font-size: 22px;
+
     line-height: 1;
 
     letter-spacing: -0.045em;
@@ -463,39 +438,35 @@ p {
     font-weight: 700;
 }
 
-
-/* ROLE AREA */
-
 .career-roles {
     display: flex;
     align-items: flex-start;
 
-    gap: 13px;
+    gap: 10px;
 
-    margin-top: 45px;
+    margin-top: 28px;
 }
 
 .career-roles.single-role {
     display: block;
 }
 
-
-/* INDIVIDUAL ROLE */
-
 .career-role {
     flex: 1;
+
     min-width: 0;
 }
 
 .career-date {
     display: block;
 
-    margin-bottom: 8px;
+    margin-bottom: 5px;
 
     color: var(--muted);
 
-    font-size: 10px;
-    line-height: 1.35;
+    font-size: 9px;
+
+    line-height: 1.3;
 
     letter-spacing: 0.01em;
 }
@@ -505,156 +476,57 @@ p {
 
     color: var(--text);
 
-    font-size: 13px;
-    line-height: 1.35;
+    font-size: 11px;
+
+    line-height: 1.3;
 
     letter-spacing: -0.015em;
 
     font-weight: 600;
 }
 
-
-/* PROGRESSION ARROW */
-
 .career-arrow {
     flex-shrink: 0;
 
-    margin-top: 17px;
+    margin-top: 13px;
 
     color: var(--accent-dark);
 
-    font-size: 22px;
+    font-size: 17px;
+
     line-height: 1;
 }
-
-
-/* CAREER FOCUS */
 
 .career-focus {
     position: absolute;
 
-    left: 40px;
-    right: 40px;
-    bottom: 32px;
+    left: 30px;
+    right: 30px;
+    bottom: 24px;
 
     color: var(--muted);
 
-    font-size: 11px;
-    line-height: 1.65;
+    font-size: 9px;
+
+    line-height: 1.55;
 
     letter-spacing: 0.01em;
 }
 
 
 /* =========================================
-   CAREER PROGRESSION — TABLET
-========================================= */
-
-@media (max-width: 1000px) {
-
-    .career-card {
-        padding-left: 28px;
-        padding-right: 28px;
-    }
-
-    .career-focus {
-        left: 28px;
-        right: 28px;
-    }
-
-    .career-card h3 {
-        font-size: 24px;
-    }
-
-    .career-roles {
-        flex-direction: column;
-        gap: 16px;
-    }
-
-    .career-arrow {
-        display: none;
-    }
-
-}
-
-
-/* =========================================
-   CAREER PROGRESSION — MOBILE
-========================================= */
-
-@media (max-width: 700px) {
-
-    .career-progression {
-        padding: 55px 0 45px;
-    }
-
-    .career-grid {
-        grid-template-columns: 1fr;
-
-        margin-top: 32px;
-    }
-
-    .career-card {
-        min-height: 0;
-
-        padding: 30px 22px 30px;
-
-        border-right: none;
-        border-bottom: 1px solid var(--border);
-    }
-
-    .career-card:last-child {
-        border-bottom: none;
-    }
-
-    .career-card h3 {
-        margin-top: 35px;
-
-        font-size: 25px;
-    }
-
-    .career-roles {
-        margin-top: 30px;
-
-        gap: 18px;
-    }
-
-    .career-role {
-        width: 100%;
-    }
-
-    .career-date {
-        font-size: 9px;
-        margin-bottom: 6px;
-    }
-
-    .career-role strong {
-        font-size: 13px;
-    }
-
-    .career-focus {
-        position: static;
-
-        margin-top: 28px;
-
-        font-size: 10px;
-    }
-
-}
-/* =========================================
    EXPERIENCE
 ========================================= */
 
 .experience-section {
-    padding-top: 60px;
-
-    padding-bottom: 72px;
+    padding-top: 48px;
+    padding-bottom: 65px;
 }
 
 .experience-company {
-    margin-top: 48px;
+    margin-top: 38px;
 
-    padding: 0 0 58px;
+    padding: 0 0 48px;
 
     border-bottom: 1px solid var(--border);
 }
@@ -672,11 +544,11 @@ p {
 
     justify-content: space-between;
 
-    gap: 40px;
+    gap: 30px;
 
     padding-bottom: 20px;
 
-    border-bottom: 2px solid var(--text);
+    border-bottom: 1px solid var(--text);
 }
 
 .company-kicker {
@@ -684,7 +556,7 @@ p {
 
     color: var(--accent-dark);
 
-    font-size: 9px;
+    font-size: 8px;
 
     font-weight: 800;
 
@@ -693,7 +565,7 @@ p {
 
 .company-header h2 {
     font-size:
-        clamp(30px, 3.4vw, 44px);
+        clamp(27px, 3.4vw, 40px);
 
     line-height: 0.95;
 
@@ -702,20 +574,12 @@ p {
     font-weight: 700;
 }
 
-.company-location {
-    margin-top: 6px;
-
-    color: var(--muted);
-
-    font-size: 11px;
-}
-
 .company-date {
-    padding-top: 20px;
+    padding-top: 12px;
 
     color: var(--muted);
 
-    font-size: 10px;
+    font-size: 9px;
 
     font-weight: 650;
 
@@ -736,20 +600,22 @@ p {
 
     align-items: flex-end;
 
-    gap: 35px;
+    gap: 30px;
 
-    padding: 22px 0;
+    padding: 20px 0;
 
     border-bottom: 1px solid var(--border);
 }
 
 .role-main h3 {
-    max-width: 800px;
+    max-width: 760px;
+
+    margin-top: 0;
 
     font-size:
-        clamp(19px, 2vw, 26px);
+        clamp(16px, 1.8vw, 21px);
 
-    line-height: 1.2;
+    line-height: 1.25;
 
     letter-spacing: -0.035em;
 
@@ -759,7 +625,19 @@ p {
 .role-main h3 span {
     color: var(--accent);
 
-    padding: 0 5px;
+    padding: 0 4px;
+}
+
+.role-dates {
+    display: flex;
+
+    gap: 15px;
+
+    color: var(--muted);
+
+    font-size: 8px;
+
+    white-space: nowrap;
 }
 
 .role-focus {
@@ -767,19 +645,19 @@ p {
 
     color: var(--muted);
 
-    font-size: 10px;
+    font-size: 9px;
 
     font-weight: 600;
 
     text-align: right;
 
-    line-height: 1.6;
+    line-height: 1.5;
 }
 
 .role-focus span {
     color: var(--muted-light);
 
-    margin: 0 4px;
+    margin: 0 3px;
 }
 
 
@@ -790,104 +668,21 @@ p {
 .experience-story {
     max-width: 800px;
 
-    margin-top: 30px;
+    margin-top: 25px;
 }
 
 .experience-story p {
-    margin-bottom: 17px;
+    margin-bottom: 14px;
 
     color: var(--muted);
 
-    font-size: 14px;
+    font-size: 12px;
 
-    line-height: 1.75;
+    line-height: 1.7;
 }
 
 .experience-story p:last-child {
     margin-bottom: 0;
-}
-
-
-/* =========================================
-   WHAT I WORKED ACROSS
-========================================= */
-
-.worked-across {
-    margin-top: 32px;
-}
-
-.worked-across-heading {
-    margin-bottom: 12px;
-
-    color: var(--muted-light);
-
-    font-size: 10px;
-
-    font-weight: 800;
-
-    letter-spacing: 0.16em;
-}
-
-.worked-across-grid {
-    display: grid;
-
-    grid-template-columns:
-        repeat(4, 1fr);
-
-    gap: 1px;
-
-    background: var(--border);
-
-    border: 1px solid var(--border);
-}
-
-.worked-card {
-    min-height: 105px;
-
-    padding: 18px;
-
-    background: var(--surface);
-
-    display: flex;
-
-    flex-direction: column;
-
-    justify-content: space-between;
-}
-
-.worked-card strong {
-    font-size: 14px;
-
-    line-height: 1.1;
-
-    letter-spacing: -0.02em;
-}
-
-.worked-card span {
-    color: var(--muted);
-
-    font-size: 9px;
-
-    line-height: 1.5;
-}
-
-
-/* =========================================
-   ACHIEVEMENT HEADINGS
-========================================= */
-
-.achievement-heading {
-    margin-top: 30px;
-
-    margin-bottom: 10px;
-
-    color: var(--muted-light);
-
-    font-size: 10px;
-
-    font-weight: 800;
-
-    letter-spacing: 0.16em;
 }
 
 
@@ -901,6 +696,8 @@ p {
     grid-template-columns:
         repeat(2, 1fr);
 
+    margin-top: 27px;
+
     background: var(--dark);
 
     color: white;
@@ -912,16 +709,14 @@ p {
 }
 
 .achievement {
-    min-height: 112px;
+    min-height: 105px;
 
-    padding: 17px 19px;
+    padding: 18px 18px;
 
     border-right: 1px solid #333333;
 
     display: flex;
-
     flex-direction: column;
-
     justify-content: space-between;
 }
 
@@ -929,23 +724,9 @@ p {
     border-right: none;
 }
 
-.achievement-visual {
-    color: var(--accent);
-
-    font-size: 11px;
-
-    font-weight: 800;
-
-    line-height: 1;
-
-    min-height: 15px;
-}
-
 .achievement strong {
-    margin-top: 7px;
-
     font-size:
-        clamp(19px, 2vw, 27px);
+        clamp(18px, 2vw, 25px);
 
     line-height: 1;
 
@@ -955,21 +736,15 @@ p {
 }
 
 .achievement span {
-    margin-top: 10px;
+    color: #999999;
 
-    color: #a9a9a9;
-
-    font-size: 8.5px;
+    font-size: 8px;
 
     line-height: 1.45;
 
     text-transform: uppercase;
 
-    letter-spacing: 0.045em;
-}
-
-.compact-achievements .achievement {
-    min-height: 112px;
+    letter-spacing: 0.05em;
 }
 
 
@@ -984,14 +759,14 @@ p {
         1fr
         1fr;
 
-    gap: 75px;
+    gap: 70px;
 
-    margin-top: 42px;
+    margin-top: 38px;
 }
 
 .expertise-intro h2 {
     font-size:
-        clamp(38px, 4.4vw, 58px);
+        clamp(36px, 4.3vw, 55px);
 
     line-height: 0.98;
 
@@ -1005,9 +780,9 @@ p {
 
     color: var(--muted);
 
-    font-size: 14px;
+    font-size: 13px;
 
-    line-height: 1.75;
+    line-height: 1.7;
 }
 
 .expertise-grid {
@@ -1018,7 +793,7 @@ p {
 
     gap: 1px;
 
-    margin-top: 52px;
+    margin-top: 45px;
 
     background: var(--border);
 
@@ -1026,9 +801,9 @@ p {
 }
 
 .expertise-card {
-    min-height: 260px;
+    min-height: 225px;
 
-    padding: 29px;
+    padding: 27px;
 
     background: var(--background);
 
@@ -1046,7 +821,7 @@ p {
 .expertise-card > span {
     color: var(--accent-dark);
 
-    font-size: 9px;
+    font-size: 8px;
 
     font-weight: 800;
 
@@ -1054,9 +829,9 @@ p {
 }
 
 .expertise-card h3 {
-    margin-top: 34px;
+    margin-top: 30px;
 
-    font-size: 23px;
+    font-size: 20px;
 
     line-height: 1.1;
 
@@ -1066,13 +841,13 @@ p {
 }
 
 .expertise-card p {
-    margin-top: 13px;
+    margin-top: 11px;
 
     color: var(--muted);
 
-    font-size: 12px;
+    font-size: 11px;
 
-    line-height: 1.65;
+    line-height: 1.6;
 }
 
 
@@ -1081,9 +856,9 @@ p {
 ========================================= */
 
 .project-placeholder {
-    margin-top: 25px;
+    margin-top: 22px;
 
-    padding: 21px 0;
+    padding: 20px 0;
 
     border-top: 1px solid var(--border);
 }
@@ -1091,7 +866,7 @@ p {
 .project-placeholder > span {
     color: var(--accent-dark);
 
-    font-size: 9px;
+    font-size: 8px;
 
     font-weight: 800;
 
@@ -1099,9 +874,9 @@ p {
 }
 
 .project-placeholder h3 {
-    margin-top: 8px;
+    margin-top: 7px;
 
-    font-size: 21px;
+    font-size: 18px;
 
     line-height: 1.15;
 
@@ -1111,11 +886,11 @@ p {
 }
 
 .project-placeholder p {
-    margin-top: 8px;
+    margin-top: 7px;
 
     color: var(--muted);
 
-    font-size: 12px;
+    font-size: 11px;
 
     line-height: 1.6;
 }
@@ -1123,11 +898,11 @@ p {
 .project-placeholder small {
     display: inline-block;
 
-    margin-top: 9px;
+    margin-top: 8px;
 
     color: var(--muted-light);
 
-    font-size: 8px;
+    font-size: 7px;
 
     font-weight: 800;
 
@@ -1145,6 +920,9 @@ p {
     color: white;
 
     border-bottom: none;
+
+    padding-top: 58px;
+    padding-bottom: 48px;
 }
 
 .contact-section .section-label {
@@ -1152,10 +930,10 @@ p {
 }
 
 .contact-section h2 {
-    margin-top: 23px;
+    margin-top: 20px;
 
     font-size:
-        clamp(50px, 7vw, 90px);
+        clamp(48px, 7vw, 82px);
 
     line-height: 0.9;
 
@@ -1167,11 +945,11 @@ p {
 .contact-section > .container > p:not(.section-label) {
     max-width: 610px;
 
-    margin-top: 24px;
+    margin-top: 20px;
 
     color: #999999;
 
-    font-size: 14px;
+    font-size: 13px;
 
     line-height: 1.7;
 }
@@ -1181,19 +959,19 @@ p {
 
     flex-wrap: wrap;
 
-    gap: 26px;
+    gap: 24px;
 
-    margin-top: 32px;
+    margin-top: 28px;
 }
 
 .contact-links a {
-    padding-bottom: 5px;
+    padding-bottom: 4px;
 
     border-bottom: 1px solid #555555;
 
     color: white;
 
-    font-size: 12px;
+    font-size: 11px;
 
     font-weight: 700;
 
@@ -1214,13 +992,13 @@ p {
 ========================================= */
 
 footer {
-    padding: 20px 0;
+    padding: 18px 0;
 
     background: var(--dark);
 
     color: #666666;
 
-    font-size: 10px;
+    font-size: 9px;
 
     border-top: 1px solid #292929;
 }
@@ -1240,31 +1018,20 @@ footer .container {
 
 @media (max-width: 1000px) {
 
-    .career-glance-box,
-    .beyond-work-box {
+    .personal-grid {
         grid-template-columns:
             repeat(2, 1fr);
     }
 
-    .glance-item:nth-child(odd) {
+    .number-item:nth-child(odd) {
         border-left: 1px solid #333333;
-    }
-
-    .glance-item:nth-child(3),
-    .glance-item:nth-child(4) {
-        border-top: 1px solid #333333;
     }
 
     .section-grid,
     .expertise-intro {
         grid-template-columns: 1fr;
 
-        gap: 38px;
-    }
-
-    .worked-across-grid {
-        grid-template-columns:
-            repeat(2, 1fr);
+        gap: 35px;
     }
 
     .achievement-strip.four-column {
@@ -1276,17 +1043,28 @@ footer .container {
         border-right: none;
     }
 
-    .achievement:nth-child(3),
-    .achievement:nth-child(4) {
-        border-top: 1px solid #333333;
+    .career-grid {
+        grid-template-columns: 1fr;
     }
 
-    .progression-track {
-        overflow-x: auto;
+    .career-card {
+        border-right: none;
+
+        border-bottom: 1px solid var(--border);
     }
 
-    .progression-role {
-        min-width: 210px;
+    .career-card:last-child {
+        border-bottom: none;
+    }
+
+    .career-roles {
+        flex-direction: column;
+
+        gap: 12px;
+    }
+
+    .career-arrow {
+        display: none;
     }
 }
 
@@ -1298,7 +1076,7 @@ footer .container {
 @media (max-width: 700px) {
 
     .nav-container {
-        min-height: 60px;
+        min-height: 56px;
     }
 
     .nav-links {
@@ -1309,65 +1087,91 @@ footer .container {
     /* HERO */
 
     .hero {
-        padding: 28px 0 40px;
+        padding: 26px 0 30px;
+    }
+
+    .hero .eyebrow {
+        font-size: 8px;
     }
 
     .hero h1 {
+        margin-top: 8px;
+
         font-size:
-            clamp(40px, 13vw, 56px);
+            clamp(38px, 12vw, 54px);
+
+        line-height: 0.9;
     }
 
     .hero h2 {
-        margin-top: 19px;
+        margin-top: 16px;
 
-        font-size: 23px;
+        font-size: 21px;
     }
 
     .hero-specialties {
-        margin-top: 11px;
-
         font-size: 10px;
 
-        line-height: 1.85;
+        line-height: 1.7;
     }
 
     .hero-description {
-        margin-top: 13px;
+        font-size: 12px;
 
-        font-size: 13px;
+        line-height: 1.6;
     }
 
 
-    /* GENERAL SECTIONS */
+    /* PERSONAL NUMBERS */
+
+    .personal-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .number-item {
+        min-height: 125px;
+
+        padding: 19px 15px;
+
+        border-bottom: 1px solid #333333;
+    }
+
+    .number-item strong {
+        font-size: 18px;
+    }
+
+    .number-item span {
+        font-size: 8px;
+    }
+
+    .number-item em {
+        font-size: 8px;
+    }
+
+
+    /* SECTIONS */
 
     .section {
-        padding: 58px 0;
+        padding: 52px 0;
     }
 
-    .section-label {
-        font-size: 11px;
+    .section-grid,
+    .expertise-intro {
+        margin-top: 32px;
     }
 
-
-    /* ABOUT */
-
-    .section-grid {
-        margin-top: 35px;
-
-        gap: 32px;
-    }
-
-    .section-grid h2 {
-        font-size:
-            clamp(34px, 10vw, 46px);
+    .section-grid h2,
+    .expertise-intro h2 {
+        font-size: 36px;
     }
 
     .section-content > p {
-        font-size: 13px;
+        font-size: 12px;
 
-        line-height: 1.72;
+        line-height: 1.7;
 
-        margin-bottom: 16px;
+        margin-bottom: 14px;
     }
 
 
@@ -1375,163 +1179,101 @@ footer .container {
 
     .career-glance-section,
     .beyond-work-section {
-        padding-top: 52px;
-
-        padding-bottom: 52px;
-    }
-
-    .achievement-section-intro {
-        margin-top: 23px;
-
-        margin-bottom: 22px;
-    }
-
-    .achievement-section-intro h2 {
-        font-size:
-            clamp(30px, 9vw, 40px);
-    }
-
-    .career-glance-box,
-    .beyond-work-box {
-        grid-template-columns:
-            repeat(2, 1fr);
-    }
-
-    .glance-item {
-        min-height: 155px;
-
-        padding: 19px 16px;
-
-        border-right: 1px solid #333333;
-
-        border-bottom: 1px solid #333333;
-    }
-
-    .glance-item:nth-child(odd) {
-        border-left: 1px solid #333333;
-    }
-
-    .glance-item:nth-child(2n) {
-        border-right: none;
-    }
-
-    .glance-item:nth-child(3),
-    .glance-item:nth-child(4) {
-        border-top: none;
-    }
-
-    .glance-item:nth-last-child(-n+2) {
-        border-bottom: none;
-    }
-
-    .glance-item strong {
-        font-size: 15px;
-    }
-
-    .glance-item span {
-        font-size: 8px;
-
-        margin-top: 10px;
-    }
-
-    .glance-item em {
-        font-size: 8px;
+        padding: 38px 0;
     }
 
 
     /* CAREER PROGRESSION */
 
-    .progression-section {
-        padding-top: 52px;
-
-        padding-bottom: 48px;
+    .career-progression {
+        padding: 38px 0 35px;
     }
 
-    .progression-grid {
-        margin-top: 28px;
+    .career-grid {
+        grid-template-columns: 1fr;
 
-        gap: 24px;
+        margin-top: 25px;
     }
 
-    .progression-company {
-        padding-top: 16px;
+    .career-card {
+        min-height: 0;
+
+        padding: 25px 20px 24px;
+
+        border-right: none;
+
+        border-bottom: 1px solid var(--border);
     }
 
-    .progression-company-header {
-        margin-bottom: 13px;
-
-        gap: 12px;
+    .career-card:last-child {
+        border-bottom: none;
     }
 
-    .progression-company-header h3 {
-        font-size: 21px;
+    .career-card h3 {
+        margin-top: 30px;
+
+        font-size: 22px;
     }
 
-    .progression-company-header span {
+    .career-roles {
+        margin-top: 23px;
+
+        gap: 15px;
+    }
+
+    .career-role {
+        width: 100%;
+    }
+
+    .career-date {
         font-size: 8px;
+
+        margin-bottom: 5px;
     }
 
-    .progression-track {
-        overflow-x: auto;
-
-        scrollbar-width: thin;
+    .career-role strong {
+        font-size: 11px;
     }
 
-    .progression-role {
-        min-width: 190px;
+    .career-focus {
+        position: static;
 
-        min-height: 76px;
+        margin-top: 20px;
 
-        padding: 13px 14px;
-    }
-
-    .progression-role strong {
-        font-size: 12px;
-    }
-
-    .progression-date {
-        font-size: 8px;
-    }
-
-    .progression-arrow {
-        width: 34px;
-
-        min-width: 34px;
-
-        font-size: 15px;
+        font-size: 9px;
     }
 
 
     /* EXPERIENCE */
 
     .experience-section {
-        padding-top: 50px;
+        padding-top: 38px;
 
-        padding-bottom: 58px;
+        padding-bottom: 48px;
     }
 
     .experience-company {
-        margin-top: 40px;
+        margin-top: 30px;
 
-        padding-bottom: 48px;
+        padding-bottom: 38px;
     }
 
     .company-header {
         flex-direction: column;
 
-        gap: 8px;
+        gap: 7px;
 
-        padding-bottom: 18px;
+        padding-bottom: 17px;
     }
 
     .company-header h2 {
-        font-size: 34px;
+        font-size: 29px;
     }
 
     .company-date {
         padding-top: 0;
 
-        font-size: 9px;
+        font-size: 8px;
     }
 
     .company-role {
@@ -1539,15 +1281,23 @@ footer .container {
 
         align-items: flex-start;
 
-        gap: 15px;
+        gap: 12px;
 
-        padding: 21px 0;
+        padding: 18px 0;
     }
 
     .role-main h3 {
-        font-size: 19px;
+        font-size: 16px;
 
         line-height: 1.3;
+    }
+
+    .role-dates {
+        flex-direction: column;
+
+        gap: 3px;
+
+        font-size: 8px;
     }
 
     .role-focus {
@@ -1559,66 +1309,46 @@ footer .container {
     }
 
     .experience-story {
-        margin-top: 25px;
+        margin-top: 21px;
     }
 
     .experience-story p {
-        font-size: 13px;
+        font-size: 11px;
 
-        line-height: 1.72;
+        line-height: 1.7;
+
+        margin-bottom: 12px;
     }
 
 
-    /* WHAT I WORKED ACROSS */
-
-    .worked-across {
-        margin-top: 28px;
-    }
-
-    .worked-across-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .worked-card {
-        min-height: 88px;
-
-        padding: 16px;
-    }
-
-
-    /* ACHIEVEMENTS */
-
-    .achievement-heading {
-        margin-top: 26px;
-    }
+    /* ACHIEVEMENT STRIPS */
 
     .achievement-strip,
     .achievement-strip.four-column {
         grid-template-columns:
             repeat(2, 1fr);
 
-        margin-top: 8px;
+        margin-top: 23px;
     }
 
     .achievement {
-        min-height: 108px;
+        min-height: 95px;
 
-        padding: 16px 14px;
-
-        border-right: 1px solid #333333;
-
-        border-bottom: 1px solid #333333;
+        padding: 17px 14px;
     }
 
-    .achievement:nth-child(2n) {
+    .achievement:nth-child(2) {
         border-right: none;
     }
 
-    .achievement:nth-child(3),
-    .achievement:nth-child(4) {
-        border-top: none;
+    .achievement:nth-child(3) {
+        border-top: 1px solid #333333;
+    }
 
-        border-bottom: none;
+    .achievement:nth-child(4) {
+        border-top: 1px solid #333333;
+
+        border-right: none;
     }
 
     .achievement strong {
@@ -1626,83 +1356,91 @@ footer .container {
     }
 
     .achievement span {
-        font-size: 7.5px;
+        font-size: 7px;
+
+        line-height: 1.4;
     }
 
 
     /* EXPERTISE */
 
-    .expertise-intro {
-        margin-top: 35px;
-
-        gap: 30px;
-    }
-
-    .expertise-intro h2 {
-        font-size:
-            clamp(34px, 10vw, 46px);
-    }
-
-    .expertise-intro > p {
-        font-size: 13px;
-    }
-
     .expertise-grid {
         grid-template-columns: 1fr;
 
-        margin-top: 40px;
+        margin-top: 35px;
     }
 
     .expertise-card {
         min-height: auto;
 
-        padding: 26px;
+        padding: 24px;
     }
 
     .expertise-card h3 {
-        margin-top: 30px;
+        margin-top: 27px;
 
-        font-size: 21px;
+        font-size: 20px;
     }
 
     .expertise-card p {
-        font-size: 11px;
+        font-size: 10px;
+
+        line-height: 1.6;
     }
 
 
     /* PROJECTS */
 
     .project-placeholder {
-        padding: 20px 0;
+        padding: 19px 0;
+
+        margin-top: 20px;
     }
 
 
     /* CONTACT */
 
+    .contact-section {
+        padding-top: 48px;
+
+        padding-bottom: 38px;
+    }
+
     .contact-section h2 {
         font-size:
-            clamp(48px, 15vw, 74px);
+            clamp(48px, 15vw, 72px);
+
+        margin-top: 18px;
     }
 
     .contact-section > .container > p:not(.section-label) {
-        font-size: 13px;
+        font-size: 12px;
+
+        margin-top: 17px;
     }
 
     .contact-links {
         flex-direction: column;
 
         align-items: flex-start;
+
+        gap: 18px;
+
+        margin-top: 23px;
     }
 
 
     /* FOOTER */
+
+    footer {
+        padding: 15px 0;
+    }
 
     footer .container {
         flex-direction: column;
 
         align-items: flex-start;
 
-        gap: 6px;
+        gap: 5px;
     }
-
 }
