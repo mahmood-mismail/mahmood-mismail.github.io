@@ -2,6 +2,7 @@
     --background: #f5f5f2;
     --surface: #ffffff;
     --dark: #111111;
+    --dark-soft: #202020;
     --text: #171717;
     --muted: #666666;
     --muted-light: #999999;
@@ -14,7 +15,7 @@
 
 
 /* =========================================
-   RESET
+RESET
 ========================================= */
 
 * {
@@ -60,7 +61,7 @@ p {
 
 
 /* =========================================
-   NAVIGATION
+NAVIGATION
 ========================================= */
 
 .site-header {
@@ -117,10 +118,12 @@ p {
 .nav-links {
     display: flex;
     align-items: center;
-    gap: 32px;
+    gap: 24px;
 
-    font-size: 12px;
-    font-weight: 650;
+    font-size: 10px;
+    font-weight: 700;
+
+    white-space: nowrap;
 }
 
 .nav-links a {
@@ -135,20 +138,31 @@ p {
 
 
 /* =========================================
-   HERO
+HERO
 ========================================= */
 
 .hero {
-    padding: 34px 0 48px;
+    padding: 42px 0 48px;
 
     border-bottom: 1px solid var(--border);
 }
 
-.hero h1 {
-    font-size:
-        clamp(44px, 5.2vw, 66px);
+.hero-eyebrow {
+    font-size: 9px;
+    font-weight: 800;
 
-    line-height: 0.88;
+    letter-spacing: 0.18em;
+
+    color: var(--muted-light);
+}
+
+.hero h1 {
+    margin-top: 13px;
+
+    font-size:
+        clamp(48px, 5.7vw, 72px);
+
+    line-height: 0.86;
 
     letter-spacing: -0.075em;
 
@@ -156,12 +170,12 @@ p {
 }
 
 .hero h2 {
-    max-width: 820px;
+    max-width: 850px;
 
-    margin-top: 22px;
+    margin-top: 23px;
 
     font-size:
-        clamp(22px, 2.7vw, 34px);
+        clamp(24px, 3vw, 38px);
 
     line-height: 1.05;
 
@@ -171,11 +185,13 @@ p {
 }
 
 .hero-specialties {
+    max-width: 1050px;
+
     margin-top: 13px;
 
     color: var(--accent-dark);
 
-    font-size: 12px;
+    font-size: 13px;
 
     font-weight: 700;
 
@@ -185,28 +201,28 @@ p {
 .hero-specialties span {
     color: var(--muted-light);
 
-    margin: 0 5px;
+    margin: 0 4px;
 }
 
 .hero-description {
-    max-width: 680px;
+    max-width: 760px;
 
-    margin-top: 15px;
+    margin-top: 17px;
 
     color: var(--muted);
 
-    font-size: 14px;
+    font-size: 15px;
 
     line-height: 1.7;
 }
 
 
 /* =========================================
-   GENERAL SECTIONS
+GENERAL SECTIONS
 ========================================= */
 
 .section {
-    padding: 72px 0;
+    padding: 68px 0;
 
     border-bottom: 1px solid var(--border);
 }
@@ -225,12 +241,7 @@ p {
     color: var(--muted-light);
 }
 
-
-/* =========================================
-   ABOUT
-========================================= */
-
-.section-grid {
+.section-intro-grid {
     display: grid;
 
     grid-template-columns:
@@ -239,12 +250,12 @@ p {
 
     gap: 75px;
 
-    margin-top: 42px;
+    margin-top: 34px;
 }
 
-.section-grid h2 {
+.section-intro-grid h2 {
     font-size:
-        clamp(38px, 4.4vw, 58px);
+        clamp(38px, 4.5vw, 58px);
 
     line-height: 0.98;
 
@@ -253,419 +264,240 @@ p {
     font-weight: 650;
 }
 
-.section-content {
-    max-width: 650px;
-}
-
-.section-content > p {
-    margin-bottom: 18px;
+.section-intro-grid > p {
+    max-width: 620px;
 
     color: var(--muted);
 
-    font-size: 14px;
+    font-size: 15px;
 
-    line-height: 1.75;
-}
-
-.section-content > p:last-child {
-    margin-bottom: 0;
+    line-height: 1.8;
 }
 
 
 /* =========================================
-   ACHIEVEMENT SECTION INTRO
+QUICK OVERVIEW
 ========================================= */
 
-.achievement-section-intro {
-    margin-top: 30px;
-
-    margin-bottom: 28px;
+.overview-subsection {
+    margin-top: 38px;
 }
 
-.achievement-section-intro h2 {
-    max-width: 650px;
+.overview-subsection + .overview-subsection {
+    margin-top: 55px;
+}
 
-    font-size:
-        clamp(32px, 3.8vw, 50px);
+.subsection-header {
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        0.85fr;
+
+    gap: 50px;
+
+    align-items: end;
+
+    margin-bottom: 22px;
+}
+
+.subsection-header h2 {
+    font-size: 30px;
 
     line-height: 1;
 
-    letter-spacing: -0.055em;
+    letter-spacing: -0.04em;
 
     font-weight: 650;
 }
 
+.subsection-header p {
+    color: var(--muted);
 
-/* =========================================
-   CAREER AT A GLANCE
-========================================= */
+    font-size: 12px;
 
-.career-glance-section {
-    padding-top: 62px;
-    padding-bottom: 62px;
+    line-height: 1.6;
 }
 
-.career-glance-box,
-.beyond-work-box {
+.overview-grid {
     display: grid;
 
+    gap: 1px;
+
+    background: #333333;
+
+    border: 1px solid #333333;
+}
+
+.career-overview {
     grid-template-columns:
         repeat(4, 1fr);
+}
+
+.personal-overview {
+    grid-template-columns:
+        repeat(5, 1fr);
+}
+
+.overview-card {
+    min-height: 255px;
+
+    padding: 23px 21px;
 
     background: var(--dark);
 
     color: white;
-}
 
-.glance-item {
-    min-height: 170px;
-
-    padding: 23px 22px;
-
-    border-right: 1px solid #333333;
+    position: relative;
 
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-
-    position: relative;
 }
 
-.glance-item:last-child {
-    border-right: none;
-}
-
-.glance-visual {
+.card-number {
     color: var(--accent);
 
-    font-size: 15px;
+    font-size: 10px;
 
     font-weight: 800;
 
-    letter-spacing: -0.03em;
-
-    min-height: 22px;
+    letter-spacing: 0.1em;
 }
 
-.glance-item strong {
-    margin-top: 12px;
+.card-content {
+    margin-top: auto;
+}
 
-    font-size: 18px;
+.card-kicker {
+    display: block;
+
+    color: var(--accent);
+
+    font-size: 8px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.13em;
+
+    text-transform: uppercase;
+}
+
+.card-content h3 {
+    margin-top: 7px;
+
+    color: white;
+
+    font-size: 16px;
 
     line-height: 1.05;
 
-    letter-spacing: -0.035em;
+    letter-spacing: -0.025em;
 
     font-weight: 700;
 }
 
-.glance-item span {
-    margin-top: 13px;
-
-    color: #c8c8c8;
-
-    font-size: 10px;
-
-    line-height: 1.5;
-
-    text-transform: uppercase;
-
-    letter-spacing: 0.045em;
-}
-
-.glance-item em {
-    display: block;
-
-    margin-top: 6px;
-
-    color: #dddddd;
+.card-content h3 em {
+    color: var(--muted-light);
 
     font-size: 9px;
 
     font-style: normal;
 
-    line-height: 1.45;
+    font-weight: 600;
+
+    margin-left: 3px;
 }
 
+.card-content p {
+    margin-top: 9px;
 
-/* =========================================
-   BEYOND WORK
-========================================= */
-
-.beyond-work-section {
-    padding-top: 62px;
-    padding-bottom: 62px;
-}
-
-.beyond-work-box .glance-item {
-    min-height: 175px;
-}
-
-/* =========================================
-   CAREER PROGRESSION
-========================================= */
-
-.career-progression {
-    padding: 65px 0 55px;
-    background: var(--background);
-    border-bottom: 1px solid var(--border);
-}
-
-.career-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-
-    margin-top: 42px;
-
-    border-top: 1px solid var(--border);
-    border-bottom: 1px solid var(--border);
-}
-
-.career-card {
-    position: relative;
-
-    min-height: 350px;
-
-    padding: 42px 40px 32px;
-
-    border-right: 1px solid var(--border);
-}
-
-.career-card:last-child {
-    border-right: none;
-}
-
-
-/* NUMBER */
-
-.career-number {
-    display: block;
-
-    color: var(--accent-dark);
-
-    font-size: 11px;
-    font-weight: 800;
-
-    letter-spacing: 0.15em;
-}
-
-
-/* COMPANY */
-
-.career-card h3 {
-    margin-top: 65px;
-
-    font-size: 27px;
-    line-height: 1;
-
-    letter-spacing: -0.045em;
-
-    font-weight: 700;
-}
-
-
-/* ROLE AREA */
-
-.career-roles {
-    display: flex;
-    align-items: flex-start;
-
-    gap: 13px;
-
-    margin-top: 45px;
-}
-
-.career-roles.single-role {
-    display: block;
-}
-
-
-/* INDIVIDUAL ROLE */
-
-.career-role {
-    flex: 1;
-    min-width: 0;
-}
-
-.career-date {
-    display: block;
-
-    margin-bottom: 8px;
-
-    color: var(--muted);
+    color: #dddddd;
 
     font-size: 10px;
-    line-height: 1.35;
 
-    letter-spacing: 0.01em;
+    line-height: 1.55;
 }
 
-.career-role strong {
+.card-content small {
     display: block;
 
-    color: var(--text);
+    margin-top: 12px;
 
-    font-size: 13px;
-    line-height: 1.35;
+    color: #888888;
 
-    letter-spacing: -0.015em;
+    font-size: 8px;
 
-    font-weight: 600;
+    line-height: 1.55;
+
+    letter-spacing: 0.025em;
 }
 
 
-/* PROGRESSION ARROW */
+/* =========================================
+MY STORY
+========================================= */
 
-.career-arrow {
-    flex-shrink: 0;
+.story-grid {
+    display: grid;
 
-    margin-top: 17px;
+    grid-template-columns:
+        0.9fr
+        1.1fr;
 
-    color: var(--accent-dark);
+    gap: 90px;
 
-    font-size: 22px;
-    line-height: 1;
+    margin-top: 38px;
 }
 
+.story-title h2 {
+    font-size:
+        clamp(40px, 4.5vw, 60px);
 
-/* CAREER FOCUS */
+    line-height: 0.96;
 
-.career-focus {
-    position: absolute;
+    letter-spacing: -0.06em;
 
-    left: 40px;
-    right: 40px;
-    bottom: 32px;
+    font-weight: 650;
+}
+
+.story-content {
+    max-width: 700px;
+}
+
+.story-content p {
+    margin-bottom: 20px;
 
     color: var(--muted);
 
-    font-size: 11px;
-    line-height: 1.65;
+    font-size: 15px;
 
-    letter-spacing: 0.01em;
+    line-height: 1.8;
+}
+
+.story-content p:last-child {
+    margin-bottom: 0;
 }
 
 
 /* =========================================
-   CAREER PROGRESSION — TABLET
+CAREER JOURNEY
 ========================================= */
 
-@media (max-width: 1000px) {
-
-    .career-card {
-        padding-left: 28px;
-        padding-right: 28px;
-    }
-
-    .career-focus {
-        left: 28px;
-        right: 28px;
-    }
-
-    .career-card h3 {
-        font-size: 24px;
-    }
-
-    .career-roles {
-        flex-direction: column;
-        gap: 16px;
-    }
-
-    .career-arrow {
-        display: none;
-    }
-
-}
-
-
-/* =========================================
-   CAREER PROGRESSION — MOBILE
-========================================= */
-
-@media (max-width: 700px) {
-
-    .career-progression {
-        padding: 55px 0 45px;
-    }
-
-    .career-grid {
-        grid-template-columns: 1fr;
-
-        margin-top: 32px;
-    }
-
-    .career-card {
-        min-height: 0;
-
-        padding: 30px 22px 30px;
-
-        border-right: none;
-        border-bottom: 1px solid var(--border);
-    }
-
-    .career-card:last-child {
-        border-bottom: none;
-    }
-
-    .career-card h3 {
-        margin-top: 35px;
-
-        font-size: 25px;
-    }
-
-    .career-roles {
-        margin-top: 30px;
-
-        gap: 18px;
-    }
-
-    .career-role {
-        width: 100%;
-    }
-
-    .career-date {
-        font-size: 9px;
-        margin-bottom: 6px;
-    }
-
-    .career-role strong {
-        font-size: 13px;
-    }
-
-    .career-focus {
-        position: static;
-
-        margin-top: 28px;
-
-        font-size: 10px;
-    }
-
-}
-/* =========================================
-   EXPERIENCE
-========================================= */
-
-.experience-section {
-    padding-top: 60px;
-
-    padding-bottom: 72px;
-}
-
-.experience-company {
+.career-company {
     margin-top: 48px;
 
-    padding: 0 0 58px;
+    padding-bottom: 62px;
 
     border-bottom: 1px solid var(--border);
 }
 
-.experience-company:last-child {
+.career-company:last-child {
     border-bottom: none;
 
     padding-bottom: 0;
 }
 
-.company-header {
+.company-top {
     display: flex;
 
     align-items: flex-start;
@@ -675,25 +507,25 @@ p {
     gap: 40px;
 
     padding-bottom: 20px;
-
-    border-bottom: 2px solid var(--text);
 }
 
-.company-kicker {
-    margin-bottom: 7px;
+.company-index {
+    display: block;
+
+    margin-bottom: 8px;
 
     color: var(--accent-dark);
 
-    font-size: 9px;
+    font-size: 10px;
 
     font-weight: 800;
 
-    letter-spacing: 0.15em;
+    letter-spacing: 0.12em;
 }
 
-.company-header h2 {
+.company-top h2 {
     font-size:
-        clamp(30px, 3.4vw, 44px);
+        clamp(35px, 4vw, 50px);
 
     line-height: 0.95;
 
@@ -702,361 +534,87 @@ p {
     font-weight: 700;
 }
 
-.company-location {
-    margin-top: 6px;
+.company-meta {
+    margin-top: 7px;
 
     color: var(--muted);
 
     font-size: 11px;
 }
 
-.company-date {
-    padding-top: 20px;
+.company-period {
+    padding-top: 30px;
 
     color: var(--muted);
 
     font-size: 10px;
 
-    font-weight: 650;
+    font-weight: 700;
 
     white-space: nowrap;
-
-    letter-spacing: 0.03em;
 }
 
+.role-line {
+    padding: 18px 0 20px;
 
-/* =========================================
-   COMPANY ROLE
-========================================= */
-
-.company-role {
-    display: flex;
-
-    justify-content: space-between;
-
-    align-items: flex-end;
-
-    gap: 35px;
-
-    padding: 22px 0;
-
-    border-bottom: 1px solid var(--border);
+    border-top: 1px solid var(--border);
 }
 
-.role-main h3 {
-    max-width: 800px;
-
+.role-line h3 {
     font-size:
-        clamp(19px, 2vw, 26px);
+        clamp(18px, 2vw, 25px);
 
-    line-height: 1.2;
+    line-height: 1.25;
 
     letter-spacing: -0.035em;
 
     font-weight: 650;
 }
 
-.role-main h3 span {
+.role-line span {
     color: var(--accent);
 
     padding: 0 5px;
 }
 
-.role-focus {
-    max-width: 390px;
+.career-story {
+    max-width: 850px;
 
-    color: var(--muted);
-
-    font-size: 10px;
-
-    font-weight: 600;
-
-    text-align: right;
-
-    line-height: 1.6;
+    margin-top: 23px;
 }
 
-.role-focus span {
-    color: var(--muted-light);
-
-    margin: 0 4px;
-}
-
-
-/* =========================================
-   EXPERIENCE STORY
-========================================= */
-
-.experience-story {
-    max-width: 800px;
-
-    margin-top: 30px;
-}
-
-.experience-story p {
-    margin-bottom: 17px;
+.career-story p {
+    margin-bottom: 18px;
 
     color: var(--muted);
 
     font-size: 14px;
 
-    line-height: 1.75;
+    line-height: 1.8;
 }
 
-.experience-story p:last-child {
+.career-story p:last-child {
     margin-bottom: 0;
 }
 
-
-/* =========================================
-   WHAT I WORKED ACROSS
-========================================= */
-
-.worked-across {
-    margin-top: 32px;
+.career-subsection {
+    margin-top: 34px;
 }
 
-.worked-across-heading {
-    margin-bottom: 12px;
-
-    color: var(--muted-light);
-
-    font-size: 10px;
-
-    font-weight: 800;
-
-    letter-spacing: 0.16em;
-}
-
-.worked-across-grid {
-    display: grid;
-
-    grid-template-columns:
-        repeat(4, 1fr);
-
-    gap: 1px;
-
-    background: var(--border);
-
-    border: 1px solid var(--border);
-}
-
-.worked-card {
-    min-height: 105px;
-
-    padding: 18px;
-
-    background: var(--surface);
-
-    display: flex;
-
-    flex-direction: column;
-
-    justify-content: space-between;
-}
-
-.worked-card strong {
-    font-size: 14px;
-
-    line-height: 1.1;
-
-    letter-spacing: -0.02em;
-}
-
-.worked-card span {
-    color: var(--muted);
-
-    font-size: 9px;
-
-    line-height: 1.5;
-}
-
-
-/* =========================================
-   ACHIEVEMENT HEADINGS
-========================================= */
-
-.achievement-heading {
-    margin-top: 30px;
-
-    margin-bottom: 10px;
-
-    color: var(--muted-light);
-
-    font-size: 10px;
-
-    font-weight: 800;
-
-    letter-spacing: 0.16em;
-}
-
-
-/* =========================================
-   ACHIEVEMENT STRIPS
-========================================= */
-
-.achievement-strip {
-    display: grid;
-
-    grid-template-columns:
-        repeat(2, 1fr);
-
-    background: var(--dark);
-
-    color: white;
-}
-
-.achievement-strip.four-column {
-    grid-template-columns:
-        repeat(4, 1fr);
-}
-
-.achievement {
-    min-height: 112px;
-
-    padding: 17px 19px;
-
-    border-right: 1px solid #333333;
-
-    display: flex;
-
-    flex-direction: column;
-
-    justify-content: space-between;
-}
-
-.achievement:last-child {
-    border-right: none;
-}
-
-.achievement-visual {
-    color: var(--accent);
-
-    font-size: 11px;
-
-    font-weight: 800;
-
-    line-height: 1;
-
-    min-height: 15px;
-}
-
-.achievement strong {
-    margin-top: 7px;
-
-    font-size:
-        clamp(19px, 2vw, 27px);
-
-    line-height: 1;
-
-    letter-spacing: -0.045em;
-
-    font-weight: 700;
-}
-
-.achievement span {
-    margin-top: 10px;
-
-    color: #a9a9a9;
-
-    font-size: 8.5px;
-
-    line-height: 1.45;
-
-    text-transform: uppercase;
-
-    letter-spacing: 0.045em;
-}
-
-.compact-achievements .achievement {
-    min-height: 112px;
-}
-
-
-/* =========================================
-   EXPERTISE
-========================================= */
-
-.expertise-intro {
-    display: grid;
-
-    grid-template-columns:
-        1fr
-        1fr;
-
-    gap: 75px;
-
-    margin-top: 42px;
-}
-
-.expertise-intro h2 {
-    font-size:
-        clamp(38px, 4.4vw, 58px);
-
-    line-height: 0.98;
-
-    letter-spacing: -0.06em;
-
-    font-weight: 650;
-}
-
-.expertise-intro > p {
-    max-width: 570px;
-
-    color: var(--muted);
-
-    font-size: 14px;
-
-    line-height: 1.75;
-}
-
-.expertise-grid {
-    display: grid;
-
-    grid-template-columns:
-        repeat(2, 1fr);
-
-    gap: 1px;
-
-    margin-top: 52px;
-
-    background: var(--border);
-
-    border: 1px solid var(--border);
-}
-
-.expertise-card {
-    min-height: 260px;
-
-    padding: 29px;
-
-    background: var(--background);
-
-    transition:
-        transform 0.2s ease,
-        background 0.2s ease;
-}
-
-.expertise-card:hover {
-    background: var(--surface);
-
-    transform: translateY(-2px);
-}
-
-.expertise-card > span {
+.subsection-title {
     color: var(--accent-dark);
 
     font-size: 9px;
 
     font-weight: 800;
 
-    letter-spacing: 0.13em;
+    letter-spacing: 0.16em;
 }
 
-.expertise-card h3 {
-    margin-top: 34px;
+.subsection-heading {
+    margin-top: 8px;
 
-    font-size: 23px;
+    font-size: 22px;
 
     line-height: 1.1;
 
@@ -1065,30 +623,90 @@ p {
     font-weight: 650;
 }
 
-.expertise-card p {
-    margin-top: 13px;
+.subsection-copy {
+    max-width: 850px;
+
+    margin-top: 12px;
 
     color: var(--muted);
 
-    font-size: 12px;
+    font-size: 13px;
 
-    line-height: 1.65;
+    line-height: 1.75;
 }
 
 
 /* =========================================
-   PROJECTS
+INTEGRATED MEDIA
 ========================================= */
 
-.project-placeholder {
-    margin-top: 25px;
+.media-grid {
+    display: grid;
 
-    padding: 21px 0;
+    grid-template-columns:
+        repeat(4, 1fr);
 
-    border-top: 1px solid var(--border);
+    gap: 1px;
+
+    margin-top: 15px;
+
+    background: var(--border);
+
+    border: 1px solid var(--border);
 }
 
-.project-placeholder > span {
+.media-card {
+    min-height: 125px;
+
+    padding: 20px;
+
+    background: var(--background);
+}
+
+.media-card strong {
+    font-size: 15px;
+
+    font-weight: 700;
+}
+
+.media-card p {
+    margin-top: 13px;
+
+    color: var(--muted);
+
+    font-size: 10px;
+
+    line-height: 1.6;
+}
+
+.media-card small {
+    display: block;
+
+    margin-top: 5px;
+
+    color: var(--muted-light);
+
+    font-size: 9px;
+}
+
+
+/* =========================================
+TWO COLUMN CAREER STORY
+========================================= */
+
+.two-column-story {
+    display: grid;
+
+    grid-template-columns:
+        0.35fr
+        1fr;
+
+    gap: 50px;
+
+    padding-top: 10px;
+}
+
+.story-kicker {
     color: var(--accent-dark);
 
     font-size: 9px;
@@ -1098,53 +716,616 @@ p {
     letter-spacing: 0.14em;
 }
 
-.project-placeholder h3 {
+
+/* =========================================
+PROCESS
+========================================= */
+
+.process-line {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    align-items: center;
+
+    gap: 7px;
+
+    margin-top: 15px;
+
+    color: var(--text);
+
+    font-size: 11px;
+
+    font-weight: 700;
+}
+
+.process-line span {
+    color: var(--accent);
+}
+
+
+/* =========================================
+MINI TECHNOLOGY GRID
+========================================= */
+
+.technology-mini-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 1px;
+
+    margin-top: 20px;
+
+    background: var(--border);
+
+    border: 1px solid var(--border);
+}
+
+.technology-mini-grid > div {
+    padding: 21px;
+
+    background: var(--background);
+}
+
+.technology-mini-grid strong {
+    font-size: 13px;
+
+    font-weight: 700;
+}
+
+.technology-mini-grid p {
     margin-top: 8px;
+
+    color: var(--muted);
+
+    font-size: 10px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================
+CROSS FUNCTIONAL
+========================================= */
+
+.cross-functional-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 1px;
+
+    margin-top: 18px;
+
+    background: var(--border);
+
+    border: 1px solid var(--border);
+}
+
+.cross-functional-grid > div {
+    padding: 20px;
+
+    background: var(--background);
+}
+
+.cross-functional-grid strong {
+    font-size: 13px;
+
+    font-weight: 700;
+}
+
+.cross-functional-grid p {
+    margin-top: 8px;
+
+    color: var(--muted);
+
+    font-size: 10px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================
+CAREER ACHIEVEMENTS
+========================================= */
+
+.career-achievements {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 1px;
+
+    margin-top: 30px;
+
+    background: #333333;
+
+    border: 1px solid #333333;
+}
+
+.career-company:first-of-type .career-achievements {
+    grid-template-columns:
+        repeat(3, 1fr);
+}
+
+.career-achievements .achievement-item {
+    min-height: 105px;
+
+    padding: 20px;
+
+    background: var(--dark-soft);
+
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.achievement-item strong {
+    color: white;
+
+    font-size: 22px;
+
+    line-height: 1;
+
+    letter-spacing: -0.04em;
+
+    font-weight: 700;
+}
+
+.achievement-item span {
+    color: #a9a9a9;
+
+    font-size: 8px;
+
+    line-height: 1.5;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.055em;
+}
+
+
+/* =========================================
+WHAT I DO
+========================================= */
+
+.capability-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 1px;
+
+    margin-top: 48px;
+
+    background: var(--border);
+
+    border: 1px solid var(--border);
+}
+
+.capability-card {
+    min-height: 245px;
+
+    padding: 28px;
+
+    background: var(--background);
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease;
+}
+
+.capability-card:hover {
+    background: var(--surface);
+
+    transform: translateY(-2px);
+}
+
+.capability-card > span {
+    color: var(--accent-dark);
+
+    font-size: 9px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.13em;
+}
+
+.capability-card h3 {
+    margin-top: 42px;
 
     font-size: 21px;
 
-    line-height: 1.15;
+    line-height: 1.1;
 
-    letter-spacing: -0.03em;
+    letter-spacing: -0.035em;
 
     font-weight: 650;
 }
 
-.project-placeholder p {
-    margin-top: 8px;
+.capability-card p {
+    margin-top: 13px;
 
     color: var(--muted);
 
     font-size: 12px;
 
-    line-height: 1.6;
+    line-height: 1.7;
 }
 
-.project-placeholder small {
-    display: inline-block;
 
-    margin-top: 9px;
+/* =========================================
+TECHNOLOGY
+========================================= */
+
+.technology-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 1px;
+
+    margin-top: 48px;
+
+    background: var(--border);
+
+    border: 1px solid var(--border);
+}
+
+.technology-card {
+    min-height: 205px;
+
+    padding: 28px;
+
+    background: var(--background);
+}
+
+.technology-card > span {
+    color: var(--accent-dark);
+
+    font-size: 9px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.13em;
+}
+
+.technology-card h3 {
+    margin-top: 32px;
+
+    font-size: 21px;
+
+    line-height: 1.1;
+
+    letter-spacing: -0.035em;
+
+    font-weight: 650;
+}
+
+.technology-card p {
+    margin-top: 12px;
+
+    color: var(--muted);
+
+    font-size: 12px;
+
+    line-height: 1.7;
+}
+
+.technology-disclaimer {
+    display: grid;
+
+    grid-template-columns:
+        0.4fr
+        1fr;
+
+    gap: 50px;
+
+    margin-top: 28px;
+
+    padding: 24px;
+
+    background: var(--dark);
+
+    color: white;
+}
+
+.technology-disclaimer strong {
+    color: var(--accent);
+
+    font-size: 9px;
+
+    letter-spacing: 0.13em;
+}
+
+.technology-disclaimer p {
+    color: #999999;
+
+    font-size: 12px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================
+HOW I WORK
+========================================= */
+
+.working-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 1px;
+
+    margin-top: 48px;
+
+    background: var(--border);
+
+    border: 1px solid var(--border);
+}
+
+.working-card {
+    min-height: 235px;
+
+    padding: 28px;
+
+    background: var(--background);
+}
+
+.working-card > span {
+    color: var(--accent-dark);
+
+    font-size: 9px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.13em;
+}
+
+.working-card h3 {
+    margin-top: 34px;
+
+    font-size: 21px;
+
+    line-height: 1.1;
+
+    letter-spacing: -0.035em;
+
+    font-weight: 650;
+}
+
+.working-card p {
+    margin-top: 12px;
+
+    color: var(--muted);
+
+    font-size: 12px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================
+COMMERCIAL TECHNOLOGY LAB
+========================================= */
+
+.lab-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 1px;
+
+    margin-top: 48px;
+
+    background: var(--border);
+
+    border: 1px solid var(--border);
+}
+
+.lab-card {
+    min-height: 225px;
+
+    padding: 28px;
+
+    background: var(--background);
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.lab-card:hover {
+    background: var(--surface);
+
+    transform: translateY(-2px);
+}
+
+.lab-card > span {
+    color: var(--accent-dark);
+
+    font-size: 9px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.13em;
+}
+
+.lab-card h3 {
+    margin-top: 33px;
+
+    font-size: 22px;
+
+    line-height: 1.1;
+
+    letter-spacing: -0.035em;
+
+    font-weight: 650;
+}
+
+.lab-card p {
+    margin-top: 17px;
+
+    color: var(--muted);
+
+    font-size: 12px;
+
+    line-height: 1.8;
+}
+
+.lab-card p b {
+    color: var(--accent-dark);
+
+    padding: 0 2px;
+}
+
+.lab-card small {
+    display: block;
+
+    margin-top: 17px;
 
     color: var(--muted-light);
 
     font-size: 8px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.08em;
+}
+
+
+/* =========================================
+PERSONAL
+========================================= */
+
+.personal-intro {
+    display: grid;
+
+    grid-template-columns:
+        0.9fr
+        1.1fr;
+
+    gap: 80px;
+
+    margin-top: 38px;
+}
+
+.personal-intro h2 {
+    font-size:
+        clamp(40px, 4.5vw, 60px);
+
+    line-height: 0.96;
+
+    letter-spacing: -0.06em;
+
+    font-weight: 650;
+}
+
+.personal-intro p {
+    margin-bottom: 20px;
+
+    color: var(--muted);
+
+    font-size: 14px;
+
+    line-height: 1.8;
+}
+
+.personal-intro p:last-child {
+    margin-bottom: 0;
+}
+
+.personal-build {
+    margin-top: 38px;
+
+    background: var(--dark);
+
+    color: white;
+}
+
+.build-header {
+    padding: 16px 22px;
+
+    border-bottom: 1px solid #333333;
+
+    color: var(--accent);
+
+    font-size: 9px;
 
     font-weight: 800;
 
     letter-spacing: 0.15em;
 }
 
+.build-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+}
+
+.build-category {
+    min-height: 205px;
+
+    padding: 24px;
+
+    border-right: 1px solid #333333;
+}
+
+.build-category:last-child {
+    border-right: none;
+}
+
+.build-category > span {
+    color: var(--accent);
+
+    font-size: 9px;
+
+    font-weight: 800;
+}
+
+.build-category h3 {
+    margin-top: 30px;
+
+    font-size: 21px;
+
+    letter-spacing: -0.03em;
+}
+
+.build-category ul {
+    margin-top: 15px;
+
+    padding-left: 17px;
+
+    color: #999999;
+
+    font-size: 11px;
+
+    line-height: 1.8;
+}
+
 
 /* =========================================
-   CONTACT
+CONTACT
 ========================================= */
 
 .contact-section {
+    padding: 72px 0 78px;
+
     background: var(--dark);
 
     color: white;
-
-    border-bottom: none;
 }
 
 .contact-section .section-label {
@@ -1152,28 +1333,28 @@ p {
 }
 
 .contact-section h2 {
-    margin-top: 23px;
+    margin-top: 25px;
 
     font-size:
-        clamp(50px, 7vw, 90px);
+        clamp(52px, 8vw, 96px);
 
-    line-height: 0.9;
+    line-height: 0.88;
 
     letter-spacing: -0.07em;
 
     font-weight: 700;
 }
 
-.contact-section > .container > p:not(.section-label) {
-    max-width: 610px;
+.contact-section > .container > p {
+    max-width: 680px;
 
-    margin-top: 24px;
+    margin-top: 25px;
 
     color: #999999;
 
     font-size: 14px;
 
-    line-height: 1.7;
+    line-height: 1.75;
 }
 
 .contact-links {
@@ -1181,9 +1362,9 @@ p {
 
     flex-wrap: wrap;
 
-    gap: 26px;
+    gap: 28px;
 
-    margin-top: 32px;
+    margin-top: 35px;
 }
 
 .contact-links a {
@@ -1193,7 +1374,7 @@ p {
 
     color: white;
 
-    font-size: 12px;
+    font-size: 11px;
 
     font-weight: 700;
 
@@ -1210,7 +1391,7 @@ p {
 
 
 /* =========================================
-   FOOTER
+FOOTER
 ========================================= */
 
 footer {
@@ -1220,7 +1401,7 @@ footer {
 
     color: #666666;
 
-    font-size: 10px;
+    font-size: 9px;
 
     border-top: 1px solid #292929;
 }
@@ -1235,73 +1416,98 @@ footer .container {
 
 
 /* =========================================
-   TABLET
+TABLET
 ========================================= */
 
 @media (max-width: 1000px) {
 
-    .career-glance-box,
-    .beyond-work-box {
+    .nav-links {
+        gap: 14px;
+
+        font-size: 9px;
+    }
+
+    .career-overview {
         grid-template-columns:
             repeat(2, 1fr);
     }
 
-    .glance-item:nth-child(odd) {
-        border-left: 1px solid #333333;
-    }
-
-    .glance-item:nth-child(3),
-    .glance-item:nth-child(4) {
-        border-top: 1px solid #333333;
-    }
-
-    .section-grid,
-    .expertise-intro {
-        grid-template-columns: 1fr;
-
-        gap: 38px;
-    }
-
-    .worked-across-grid {
+    .personal-overview {
         grid-template-columns:
             repeat(2, 1fr);
     }
 
-    .achievement-strip.four-column {
+    .media-grid {
         grid-template-columns:
             repeat(2, 1fr);
     }
 
-    .achievement:nth-child(2) {
-        border-right: none;
+    .technology-mini-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
     }
 
-    .achievement:nth-child(3),
-    .achievement:nth-child(4) {
-        border-top: 1px solid #333333;
+    .cross-functional-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
     }
 
-    .progression-track {
-        overflow-x: auto;
+    .career-achievements {
+        grid-template-columns:
+            repeat(2, 1fr);
     }
 
-    .progression-role {
-        min-width: 210px;
+    .career-company:first-of-type .career-achievements {
+        grid-template-columns:
+            repeat(3, 1fr);
+    }
+
+    .capability-grid,
+    .working-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .build-grid {
+        grid-template-columns:
+            repeat(3, 1fr);
     }
 }
 
 
 /* =========================================
-   MOBILE
+MOBILE
 ========================================= */
 
 @media (max-width: 700px) {
+
+    .container,
+    .nav-container {
+        width: 90%;
+    }
+
+
+    /* NAV */
 
     .nav-container {
         min-height: 60px;
     }
 
     .nav-links {
+        display: flex;
+
+        max-width: calc(100vw - 75px);
+
+        overflow-x: auto;
+
+        gap: 18px;
+
+        padding-bottom: 2px;
+
+        scrollbar-width: none;
+    }
+
+    .nav-links::-webkit-scrollbar {
         display: none;
     }
 
@@ -1309,382 +1515,368 @@ footer .container {
     /* HERO */
 
     .hero {
-        padding: 28px 0 40px;
+        padding: 32px 0 36px;
+    }
+
+    .hero-eyebrow {
+        font-size: 8px;
     }
 
     .hero h1 {
+        margin-top: 11px;
+
         font-size:
-            clamp(40px, 13vw, 56px);
+            clamp(42px, 14vw, 62px);
+
+        line-height: 0.9;
     }
 
     .hero h2 {
-        margin-top: 19px;
+        margin-top: 20px;
 
-        font-size: 23px;
+        font-size: 25px;
     }
 
     .hero-specialties {
         margin-top: 11px;
 
-        font-size: 10px;
+        font-size: 11px;
 
-        line-height: 1.85;
+        line-height: 1.75;
     }
 
     .hero-description {
-        margin-top: 13px;
+        margin-top: 15px;
 
         font-size: 13px;
+
+        line-height: 1.7;
     }
 
 
-    /* GENERAL SECTIONS */
+    /* SECTIONS */
 
     .section {
-        padding: 58px 0;
+        padding: 54px 0;
     }
 
     .section-label {
+        font-size: 10px;
+    }
+
+    .section-intro-grid {
+        grid-template-columns: 1fr;
+
+        gap: 22px;
+
+        margin-top: 28px;
+    }
+
+    .section-intro-grid h2 {
+        font-size: 39px;
+    }
+
+    .section-intro-grid > p {
+        font-size: 13px;
+    }
+
+
+    /* OVERVIEW */
+
+    .overview-subsection {
+        margin-top: 30px;
+    }
+
+    .overview-subsection + .overview-subsection {
+        margin-top: 40px;
+    }
+
+    .subsection-header {
+        grid-template-columns: 1fr;
+
+        gap: 10px;
+
+        margin-bottom: 17px;
+    }
+
+    .subsection-header h2 {
+        font-size: 26px;
+    }
+
+    .subsection-header p {
         font-size: 11px;
     }
 
-
-    /* ABOUT */
-
-    .section-grid {
-        margin-top: 35px;
-
-        gap: 32px;
+    .career-overview,
+    .personal-overview {
+        grid-template-columns: 1fr;
     }
 
-    .section-grid h2 {
-        font-size:
-            clamp(34px, 10vw, 46px);
+    .overview-card {
+        min-height: 205px;
+
+        padding: 20px;
     }
 
-    .section-content > p {
+    .card-content h3 {
+        font-size: 16px;
+    }
+
+
+    /* STORY */
+
+    .story-grid {
+        grid-template-columns: 1fr;
+
+        gap: 28px;
+
+        margin-top: 30px;
+    }
+
+    .story-title h2 {
+        font-size: 40px;
+    }
+
+    .story-content p {
         font-size: 13px;
 
-        line-height: 1.72;
-
-        margin-bottom: 16px;
+        line-height: 1.75;
     }
 
 
-    /* CAREER AT A GLANCE */
+    /* CAREER */
 
-    .career-glance-section,
-    .beyond-work-section {
-        padding-top: 52px;
-
-        padding-bottom: 52px;
-    }
-
-    .achievement-section-intro {
-        margin-top: 23px;
-
-        margin-bottom: 22px;
-    }
-
-    .achievement-section-intro h2 {
-        font-size:
-            clamp(30px, 9vw, 40px);
-    }
-
-    .career-glance-box,
-    .beyond-work-box {
-        grid-template-columns:
-            repeat(2, 1fr);
-    }
-
-    .glance-item {
-        min-height: 155px;
-
-        padding: 19px 16px;
-
-        border-right: 1px solid #333333;
-
-        border-bottom: 1px solid #333333;
-    }
-
-    .glance-item:nth-child(odd) {
-        border-left: 1px solid #333333;
-    }
-
-    .glance-item:nth-child(2n) {
-        border-right: none;
-    }
-
-    .glance-item:nth-child(3),
-    .glance-item:nth-child(4) {
-        border-top: none;
-    }
-
-    .glance-item:nth-last-child(-n+2) {
-        border-bottom: none;
-    }
-
-    .glance-item strong {
-        font-size: 15px;
-    }
-
-    .glance-item span {
-        font-size: 8px;
-
-        margin-top: 10px;
-    }
-
-    .glance-item em {
-        font-size: 8px;
-    }
-
-
-    /* CAREER PROGRESSION */
-
-    .progression-section {
-        padding-top: 52px;
+    .career-company {
+        margin-top: 38px;
 
         padding-bottom: 48px;
     }
 
-    .progression-grid {
-        margin-top: 28px;
-
-        gap: 24px;
-    }
-
-    .progression-company {
-        padding-top: 16px;
-    }
-
-    .progression-company-header {
-        margin-bottom: 13px;
-
-        gap: 12px;
-    }
-
-    .progression-company-header h3 {
-        font-size: 21px;
-    }
-
-    .progression-company-header span {
-        font-size: 8px;
-    }
-
-    .progression-track {
-        overflow-x: auto;
-
-        scrollbar-width: thin;
-    }
-
-    .progression-role {
-        min-width: 190px;
-
-        min-height: 76px;
-
-        padding: 13px 14px;
-    }
-
-    .progression-role strong {
-        font-size: 12px;
-    }
-
-    .progression-date {
-        font-size: 8px;
-    }
-
-    .progression-arrow {
-        width: 34px;
-
-        min-width: 34px;
-
-        font-size: 15px;
-    }
-
-
-    /* EXPERIENCE */
-
-    .experience-section {
-        padding-top: 50px;
-
-        padding-bottom: 58px;
-    }
-
-    .experience-company {
-        margin-top: 40px;
-
-        padding-bottom: 48px;
-    }
-
-    .company-header {
+    .company-top {
         flex-direction: column;
 
         gap: 8px;
 
-        padding-bottom: 18px;
+        padding-bottom: 14px;
     }
 
-    .company-header h2 {
-        font-size: 34px;
+    .company-top h2 {
+        font-size: 38px;
     }
 
-    .company-date {
+    .company-period {
         padding-top: 0;
 
         font-size: 9px;
     }
 
-    .company-role {
-        flex-direction: column;
-
-        align-items: flex-start;
-
-        gap: 15px;
-
-        padding: 21px 0;
+    .role-line {
+        padding: 15px 0 16px;
     }
 
-    .role-main h3 {
-        font-size: 19px;
+    .role-line h3 {
+        font-size: 18px;
 
-        line-height: 1.3;
+        line-height: 1.35;
     }
 
-    .role-focus {
-        max-width: none;
-
-        text-align: left;
-
-        font-size: 9px;
+    .career-story {
+        margin-top: 20px;
     }
 
-    .experience-story {
-        margin-top: 25px;
-    }
-
-    .experience-story p {
+    .career-story p,
+    .subsection-copy {
         font-size: 13px;
 
-        line-height: 1.72;
+        line-height: 1.75;
+    }
+
+    .two-column-story {
+        grid-template-columns: 1fr;
+
+        gap: 8px;
     }
 
 
-    /* WHAT I WORKED ACROSS */
+    /* MEDIA */
 
-    .worked-across {
-        margin-top: 28px;
-    }
-
-    .worked-across-grid {
+    .media-grid {
         grid-template-columns: 1fr;
     }
 
-    .worked-card {
-        min-height: 88px;
+    .media-card {
+        min-height: auto;
 
-        padding: 16px;
+        padding: 18px;
+    }
+
+
+    /* TECHNOLOGY MINI */
+
+    .technology-mini-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cross-functional-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* PROCESS */
+
+    .process-line {
+        font-size: 10px;
+
+        line-height: 1.7;
     }
 
 
     /* ACHIEVEMENTS */
 
-    .achievement-heading {
-        margin-top: 26px;
-    }
-
-    .achievement-strip,
-    .achievement-strip.four-column {
+    .career-achievements,
+    .career-company:first-of-type .career-achievements {
         grid-template-columns:
             repeat(2, 1fr);
-
-        margin-top: 8px;
     }
 
-    .achievement {
-        min-height: 108px;
+    .career-achievements .achievement-item {
+        min-height: 95px;
 
-        padding: 16px 14px;
+        padding: 17px;
+    }
 
-        border-right: 1px solid #333333;
+    .achievement-item strong {
+        font-size: 19px;
+    }
+
+
+    /* CAPABILITIES */
+
+    .capability-grid,
+    .working-grid {
+        grid-template-columns: 1fr;
+
+        margin-top: 35px;
+    }
+
+    .capability-card,
+    .working-card {
+        min-height: auto;
+
+        padding: 24px;
+    }
+
+    .capability-card h3,
+    .working-card h3 {
+        margin-top: 27px;
+
+        font-size: 20px;
+    }
+
+
+    /* TECHNOLOGY */
+
+    .technology-grid {
+        grid-template-columns: 1fr;
+
+        margin-top: 35px;
+    }
+
+    .technology-card {
+        min-height: auto;
+
+        padding: 24px;
+    }
+
+    .technology-card h3 {
+        margin-top: 27px;
+    }
+
+    .technology-disclaimer {
+        grid-template-columns: 1fr;
+
+        gap: 12px;
+
+        margin-top: 22px;
+
+        padding: 20px;
+    }
+
+
+    /* LAB */
+
+    .lab-grid {
+        grid-template-columns: 1fr;
+
+        margin-top: 35px;
+    }
+
+    .lab-card {
+        min-height: auto;
+
+        padding: 24px;
+    }
+
+    .lab-card h3 {
+        margin-top: 27px;
+
+        font-size: 20px;
+    }
+
+
+    /* PERSONAL */
+
+    .personal-intro {
+        grid-template-columns: 1fr;
+
+        gap: 27px;
+
+        margin-top: 30px;
+    }
+
+    .personal-intro h2 {
+        font-size: 40px;
+    }
+
+    .personal-intro p {
+        font-size: 13px;
+
+        line-height: 1.75;
+    }
+
+    .personal-build {
+        margin-top: 30px;
+    }
+
+    .build-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .build-category {
+        min-height: auto;
+
+        border-right: none;
 
         border-bottom: 1px solid #333333;
     }
 
-    .achievement:nth-child(2n) {
-        border-right: none;
-    }
-
-    .achievement:nth-child(3),
-    .achievement:nth-child(4) {
-        border-top: none;
-
+    .build-category:last-child {
         border-bottom: none;
-    }
-
-    .achievement strong {
-        font-size: 18px;
-    }
-
-    .achievement span {
-        font-size: 7.5px;
-    }
-
-
-    /* EXPERTISE */
-
-    .expertise-intro {
-        margin-top: 35px;
-
-        gap: 30px;
-    }
-
-    .expertise-intro h2 {
-        font-size:
-            clamp(34px, 10vw, 46px);
-    }
-
-    .expertise-intro > p {
-        font-size: 13px;
-    }
-
-    .expertise-grid {
-        grid-template-columns: 1fr;
-
-        margin-top: 40px;
-    }
-
-    .expertise-card {
-        min-height: auto;
-
-        padding: 26px;
-    }
-
-    .expertise-card h3 {
-        margin-top: 30px;
-
-        font-size: 21px;
-    }
-
-    .expertise-card p {
-        font-size: 11px;
-    }
-
-
-    /* PROJECTS */
-
-    .project-placeholder {
-        padding: 20px 0;
     }
 
 
     /* CONTACT */
 
-    .contact-section h2 {
-        font-size:
-            clamp(48px, 15vw, 74px);
+    .contact-section {
+        padding: 58px 0 64px;
     }
 
-    .contact-section > .container > p:not(.section-label) {
+    .contact-section h2 {
+        font-size:
+            clamp(52px, 16vw, 80px);
+    }
+
+    .contact-section > .container > p {
         font-size: 13px;
     }
 
@@ -1692,10 +1884,16 @@ footer .container {
         flex-direction: column;
 
         align-items: flex-start;
+
+        gap: 20px;
     }
 
 
     /* FOOTER */
+
+    footer {
+        padding: 18px 0;
+    }
 
     footer .container {
         flex-direction: column;
