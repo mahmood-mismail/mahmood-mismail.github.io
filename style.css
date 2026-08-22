@@ -142,7 +142,7 @@ HERO
 ========================================= */
 
 .hero {
-    padding: 11px 0 11px;
+    padding: 11px 0 20px;
 
     border-bottom: 1px solid var(--border);
 }
@@ -222,7 +222,7 @@ GENERAL SECTIONS
 ========================================= */
 
 .section {
-    padding: 68px 0;
+    padding: 28px 0;
 
     border-bottom: 1px solid var(--border);
 }
@@ -232,7 +232,7 @@ GENERAL SECTIONS
 }
 
 .section-label {
-    font-size: 12px;
+    font-size: 16px;
 
     font-weight: 800;
 
@@ -484,9 +484,9 @@ CAREER JOURNEY
 ========================================= */
 
 .career-company {
-    margin-top: 48px;
+    margin-top: 22px;
 
-    padding-bottom: 62px;
+    padding-bottom: 38px;
 
     border-bottom: 1px solid var(--border);
 }
